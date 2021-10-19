@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using TP_PAVI.Negocio.Entidades;
 
 namespace TP_PAVI
 {
     public partial class FormMenu : Form
     {
+        public Usuario uLogeado { get; set; }
+
         public FormMenu()
         {
             InitializeComponent();
@@ -107,14 +109,22 @@ namespace TP_PAVI
         {
             Form_ABMC_Curso formCurso = new Form_ABMC_Curso();
             formCurso.Show();
-            this.Close();
+            
         }
 
-        private void cursosToolStripMenuItem1_Click(object sender, EventArgs e)
+        
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_ABMC_Curso formCurso = new Form_ABMC_Curso();
-            formCurso.Show();
-            this.Close();
+            Form_Categoria formCategoria = new Form_Categoria();
+            formCategoria.Show();
+        
+        }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            lblUsuarioLogueado.Text = "Usuario Logeado:  "+uLogeado.NombreUsuario.ToUpper();
         }
 
         private void restoreBtn_MouseEnter(object sender, EventArgs e)

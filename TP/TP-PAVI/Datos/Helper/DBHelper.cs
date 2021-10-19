@@ -15,7 +15,7 @@ namespace TP_PAVI.Datos
 
         private DBHelper()
         {
-            string_conexion = @"Data Source=DESKTOP-EP9FF3K\SQLEXPRESS;Initial Catalog=TP_PAVI_Extendido;Integrated Security=True";
+            string_conexion = @"Data Source=M26\SQLEXPRESS;Initial Catalog=BT3;Integrated Security=True";
         }
         
         public static DBHelper getDBHelper()

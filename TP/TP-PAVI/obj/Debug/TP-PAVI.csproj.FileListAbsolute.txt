@@ -12,3 +12,19 @@ D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP\TP-PAVI\obj\Deb
 D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP\TP-PAVI\obj\Debug\TP_PAVI.FormMenu.resources
 D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP\TP-PAVI\obj\Debug\TP_PAVI.Form_ABMC_Curso.resources
 D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP\TP-PAVI\obj\Debug\TP_PAVI.Form_AM_Curso.resources
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\bin\Debug\TP-PAVI.exe.config
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\bin\Debug\TP-PAVI.exe
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\bin\Debug\TP-PAVI.pdb
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP-PAVI.csprojAssemblyReference.cache
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP_PAVI.FormMenu.resources
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP_PAVI.Form_ABMC_Curso.resources
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP_PAVI.Form_AM_Curso.resources
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP_PAVI.FormPlantilla.resources
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP_PAVI.FormInicioSesion.resources
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP_PAVI.Properties.Resources.resources
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP-PAVI.csproj.GenerateResource.cache
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP-PAVI.csproj.CoreCompileInputs.cache
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP-PAVI.exe
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP-PAVI.pdb
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP_PAVI.Form_AM_Categoria.resources
+D:\GIT\PAV I   TP\GIT DELAVALLE  M2 MI BRANCH\PAV2021\TP\TP-PAVI\obj\Debug\TP_PAVI.Form_Categoria.resources

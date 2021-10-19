@@ -110,6 +110,7 @@ namespace TP_PAVI
                 // Login OK
                 UsuarioLogueado = usr.NombreUsuario;
                 FormMenu formMenu = new FormMenu();
+                formMenu.uLogeado = usr;
                 formMenu.Show();
                 this.Hide();
             }

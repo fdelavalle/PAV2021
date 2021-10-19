@@ -13,7 +13,7 @@ using TP_PAVI.Negocio.Control;
 
 namespace TP_PAVI
 {
-    public partial class Form_AM_Curso : Form
+    public partial class Form_AM_Categoria : Form
     {
 
         private FormMode formMode = FormMode.nuevo;
@@ -22,16 +22,11 @@ namespace TP_PAVI
         private Cursos oCursoSelected;
 
 
-        public Form_AM_Curso()
+        public Form_AM_Categoria()
         {
             InitializeComponent();
-
-
             oGestorCurso = new GestorCursos();
             oGestorCategorias = new GestorCategorias();
-           
-
-
         }
 
         int m, mx, my;
@@ -123,10 +118,9 @@ namespace TP_PAVI
             eliminar
         }
 
-        /*
         private void Form_AM_Curso_Load(System.Object sender, System.EventArgs e)
         {
-            LlenarCombo(comboBoxCategoria, oGestorCategorias.ObtenerTodos(), "nombre", "id_categoria");
+           // LlenarCombo(comboBoxCategoria, oGestorCategorias.ObtenerTodos(), "nombre", "id_categoria");
             switch (formMode)
             {
                 case FormMode.nuevo:
@@ -142,8 +136,7 @@ namespace TP_PAVI
                         MostrarDatos();
                         textBoxNombre.Enabled = true;
                         textBoxDescripcion.Enabled = true;
-                        maskedTextBoxFecha.Enabled = true;
-                        comboBoxCategoria.Enabled = true;
+                       
                         break;
                     }
 
@@ -153,14 +146,11 @@ namespace TP_PAVI
                         labelTitulo.Text = "Habilitar/Deshabilitar Curso";
                         textBoxNombre.Enabled = false;
                         textBoxDescripcion.Enabled = false;
-                        maskedTextBoxFecha.Enabled = false;
-                        comboBoxCategoria.Enabled = false;
+                       
                         break;
                     }
             }
         }
-
-        */
 
         public void InicializarFormulario(FormMode op, Cursos cursoSelected)
         {
@@ -175,9 +165,6 @@ namespace TP_PAVI
             {
                 textBoxNombre.Text = oCursoSelected.nombreCurso;
                 textBoxDescripcion.Text = oCursoSelected.descripcionCurso;
-                maskedTextBoxFecha.Text = oCursoSelected.fecha_vigenciaCurso.ToString();
-                
-                comboBoxCategoria.Text = oCursoSelected.categoriaCurso.nombreCategoria.ToString();
             }
         }
 
@@ -187,27 +174,23 @@ namespace TP_PAVI
             {
                 case FormMode.nuevo:
                     {
-                        if (ExisteCurso() == false)
+                        if (ExisteUsuario() == false)
                         {
                             if (ValidarCampos())
                             {
-                                Cursos oCurso = new Cursos();
-                                Categorias aux = new Categorias();
+                                var oCurso = new Cursos();
                                 oCurso.nombreCurso = textBoxNombre.Text;
                                 oCurso.descripcionCurso = textBoxDescripcion.Text;
-                                oCurso.fecha_vigenciaCurso = DateTime.Parse(maskedTextBoxFecha.Text);
-                                aux.id_categoria = (int)comboBoxCategoria.SelectedValue;
-                                oCurso.categoriaCurso= aux;
 
                                 if (oGestorCurso.CrearCurso(oCurso))
                                 {
-                                    MessageBox.Show("Curso insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                             }
                         }
                         else
-                            MessageBox.Show("Nombre de Curso Existente!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Nombre de usuario encontrado!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
@@ -217,18 +200,14 @@ namespace TP_PAVI
                         {
                             oCursoSelected.nombreCurso = textBoxNombre.Text;
                             oCursoSelected.descripcionCurso = textBoxDescripcion.Text;
-                            oCursoSelected.fecha_vigenciaCurso = DateTime.Parse(maskedTextBoxFecha.Text);
-
-                            //cambiar 
-                            //cambiar oCursoSelected.id_categoria = (int)comboBoxCategoria.SelectedValue;
 
                             if (oGestorCurso.ActualizarCurso(oCursoSelected))
                             {
-                                MessageBox.Show("Curso actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Usuario actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el Curso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;
@@ -236,15 +215,15 @@ namespace TP_PAVI
 
                 case FormMode.eliminar:
                     {
-                        if (MessageBox.Show("Seguro que desea Deshabilitar el Curso seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el usuario seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
                             if (oGestorCurso.EliminarCurso(oCursoSelected))
                             {
-                                MessageBox.Show("Curso Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Usuario Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el Curso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         break;
                     }
@@ -262,64 +241,8 @@ namespace TP_PAVI
             }
             else
                 textBoxNombre.BackColor = Color.White;
-
-            if (maskedTextBoxFecha.Text == string.Empty)
-            {
-                maskedTextBoxFecha.BackColor = Color.Red;
-                maskedTextBoxFecha.Focus();
-                return false;
-            }
-            else
-                maskedTextBoxFecha.BackColor = Color.White;
-
-            if (comboBoxCategoria.Text == string.Empty)
-            {
-                comboBoxCategoria.BackColor = Color.Red;
-                comboBoxCategoria.Focus();
-                return false;
-            }
-            else
-                comboBoxCategoria.BackColor = Color.White;
+                       
             return true;
-        }
-
-        private void Form_AM_Curso_Load(object sender, EventArgs e)
-        {
-            LlenarCombo(comboBoxCategoria, oGestorCategorias.ObtenerTodos(), "nombreCategoria", "id_categoria");
-            switch (formMode)
-            {
-                case FormMode.nuevo:
-                    {
-                        labelTitulo.Text = "Nuevo Curso";
-                        break;
-                    }
-
-                case FormMode.actualizar:
-                    {
-                        labelTitulo.Text = "Actualizar Curso";
-                        // Recuperar usuario seleccionado en la grilla 
-                        MostrarDatos();
-                        textBoxNombre.Enabled = true;
-                        textBoxDescripcion.Enabled = true;
-                        maskedTextBoxFecha.Enabled = true;
-                        comboBoxCategoria.Enabled = true;
-                        break;
-                    }
-
-                case FormMode.eliminar:
-                    {
-                        MostrarDatos();
-                        labelTitulo.Text = "Deshabilitar Curso";
-                        textBoxNombre.Enabled = false;
-                        textBoxDescripcion.Enabled = false;
-                        maskedTextBoxFecha.Enabled = false;
-                        comboBoxCategoria.Enabled = false;
-                        break;
-                    }
-            }
-
-
-
         }
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
@@ -329,7 +252,7 @@ namespace TP_PAVI
             cbo.ValueMember = value;
             cbo.SelectedIndex = -1;
         }
-        private bool ExisteCurso()
+        private bool ExisteUsuario()
         {
             return oGestorCurso.ObtenerCurso(textBoxNombre.Text) != null;
         }

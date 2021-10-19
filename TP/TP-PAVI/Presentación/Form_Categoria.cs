@@ -1,75 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_PAVI.Clases;
 using TP_PAVI.Negocio.Control;
 
 namespace TP_PAVI
 {
-    public partial class Form_ABMC_Curso : Form
+    public partial class Form_Categoria : Form
     {
 
 
         private GestorCursos oGestorCurso;
         private readonly GestorCategorias oGestorCategorias;
-        public Form_ABMC_Curso()
+        public Form_Categoria()
         {
             InitializeComponent();
-            InitializeDataGridView();
-
             oGestorCurso = new GestorCursos();
             oGestorCategorias = new GestorCategorias();
-
-
         }
 
-        private void InitializeDataGridView()
+        private void Form_Curso_Load(object sender, EventArgs e)
         {
-
-            // Cree un DataGridView no vinculado declarando un recuento de columnas.
-            dataGridViewCursos.ColumnCount = 5;
-            dataGridViewCursos.ColumnHeadersVisible = true;
-
-            // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
-            dataGridViewCursos.AutoGenerateColumns = false;
-
-            // Cambia el estilo de la cabecera de la grilla.
-            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
-
-            columnHeaderStyle.BackColor = Color.Beige;
-            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
-            dataGridViewCursos.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
-
-            // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
-            dataGridViewCursos.Columns[0].Name = "Nombre";
-            dataGridViewCursos.Columns[0].DataPropertyName = "NombreCurso";
-            // Definimos el ancho de la columna.
-
-            dataGridViewCursos.Columns[1].Name = "Descripcion";
-            dataGridViewCursos.Columns[1].DataPropertyName = "DescripcionCurso";
-
-            dataGridViewCursos.Columns[2].Name = "Fecha de vigencia";
-            dataGridViewCursos.Columns[2].DataPropertyName = "Fecha_vigenciaCurso";
-
-            dataGridViewCursos.Columns[3].Name = "Categoria";
-            dataGridViewCursos.Columns[3].DataPropertyName = "categoriaCurso";
-
-            dataGridViewCursos.Columns[4].Name = "Borrado";
-            dataGridViewCursos.Columns[4].DataPropertyName = "borradoCurso";
-
-
-
-            // Cambia el tamaño de la altura de los encabezados de columna.
-            dataGridViewCursos.AutoResizeColumnHeadersHeight();
-
-            // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
-            dataGridViewCursos.AutoResizeRows(
-                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
-
-
-
+            //LlenarCombo(comboBoxCategoríaCurso, oGestorCategorias.ObtenerTodos(), "nombre", "id_categoria");
         }
+
+
+
 
         int m, mx, my;
         private void panelBarraTitulo_MouseDown(object sender, MouseEventArgs e)
@@ -97,7 +59,7 @@ namespace TP_PAVI
             this.WindowState = FormWindowState.Maximized;
             maxBtn.Visible = false;
             restoreBtn.Visible = true;
-
+            
         }
 
         private void restoreBtn_Click(object sender, EventArgs e)
@@ -120,7 +82,7 @@ namespace TP_PAVI
             rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rpta == DialogResult.Yes)
             {
-                Environment.Exit(0);
+                this.Close();
             }
         }
 
@@ -157,7 +119,7 @@ namespace TP_PAVI
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
+           
             this.Close();
         }
 
@@ -235,12 +197,12 @@ namespace TP_PAVI
 
         private void infoFecha_MouseEnter(object sender, EventArgs e)
         {
-            groupBoxInfoFecha.Show();
+            //groupBoxInfoFecha.Show();
         }
 
         private void infoFecha_MouseLeave(object sender, EventArgs e)
         {
-            groupBoxInfoFecha.Hide();
+            //groupBoxInfoFecha.Hide();
         }
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
@@ -248,7 +210,7 @@ namespace TP_PAVI
             Form_AM_Curso formulario = new Form_AM_Curso();
 
             // Asi obtenemos el item seleccionado de la grilla.
-            var curso = (Cursos)dataGridViewCursos.CurrentRow.DataBoundItem;
+            var curso = (Cursos)dgvCategorias.CurrentRow.DataBoundItem;
 
             formulario.InicializarFormulario(Form_AM_Curso.FormMode.eliminar, curso);
             formulario.ShowDialog();
@@ -260,39 +222,18 @@ namespace TP_PAVI
         private void btnModificarCurso_Click(object sender, EventArgs e)
         {
             Form_AM_Curso form = new Form_AM_Curso();
-
-
-            var curso = (Cursos)dataGridViewCursos.CurrentRow.DataBoundItem;
+            var curso = (Cursos)dgvCategorias.CurrentRow.DataBoundItem;
             form.InicializarFormulario(Form_AM_Curso.FormMode.actualizar, curso);
             form.ShowDialog();
             //Forzamos el evento Click para actualizar el DataGridView.
             buttonConsultar_Click(sender, e);
-
-
         }
 
         private void btnCrearCurso_Click(object sender, EventArgs e)
         {
-            Form_AM_Curso formulario = new Form_AM_Curso();
-
+            Form_AM_Categoria formulario = new Form_AM_Categoria();
             formulario.ShowDialog();
             buttonConsultar_Click(sender, e);
-
-
-        }
-
-        private void Form_ABMC_Curso_Load(object sender, EventArgs e)
-        {
-            LlenarCombo(comboBoxCategoriaCurso, oGestorCategorias.ObtenerTodos(), "nombreCategoria", "id_categoria");
-
-        }
-
-        private void dataGridViewCursos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            btnModificarCurso.Enabled = true;
-            btnEliminarCurso.Enabled = true;
-
-
         }
 
         private void buttonConsultar_Click(object sender, EventArgs e)
@@ -300,46 +241,19 @@ namespace TP_PAVI
         {
             // Dictionary: Representa una colección de claves y valores.
             Dictionary<string, object> parametros = new Dictionary<string, object>();
-            IList<Cursos> listadoCursos;
 
-            if (!checkBoxCursosEliminados.Checked)
+            if (!string.IsNullOrEmpty(textBoxNombreCurso.Text))
             {
-
-                if (!string.IsNullOrEmpty(textBoxNombreCurso.Text))
-                {
-                    parametros.Add("nombre", textBoxNombreCurso.Text);
-                }
-
-                DateTime fecha_vigencia;
-                if (DateTime.TryParse(maskedTextBoxFecha.Text, out fecha_vigencia))
-                {
-                    parametros.Add("fecha_vigencia", maskedTextBoxFecha.Text);
-                }
-
-                if (!string.IsNullOrEmpty(comboBoxCategoriaCurso.Text))
-                {
-                    var id_categoria = comboBoxCategoriaCurso.SelectedValue.ToString();
-                    parametros.Add("id_categoria", id_categoria);
-                }
-
-                if (parametros.Count > 0)
-                {
-                    listadoCursos = oGestorCurso.ConsultarCursosConFiltro(parametros);
-
-                    dataGridViewCursos.DataSource = listadoCursos;
-                }
+                parametros.Add("nombre", textBoxNombreCurso.Text);
             }
 
-            else
-            {
-                listadoCursos = oGestorCurso.ObtenerTodos();
-                dataGridViewCursos.DataSource = listadoCursos;
+           
 
-            }
+            IList<Cursos> listadoBugs = oGestorCurso.ConsultarCursosConFiltro(parametros);
 
-            
+            dgvCategorias.DataSource = listadoBugs;
 
-            if (dataGridViewCursos.Rows.Count == 0)
+            if (dgvCategorias.Rows.Count == 0)
             {
                 MessageBox.Show("No se encontraron coincidencias para el/los filtros ingresados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

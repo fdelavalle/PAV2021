@@ -13,18 +13,28 @@ namespace TP_PAVI.Datos.Dao
         public List<Cursos> FindAll()                                       //Listar todos los cursos ordenados alfabéticamente
         {
             List<Cursos> lst = new List<Cursos>();
-            string query = "SELECT * FROM CURSOS ORDER BY nombre";
+            string query = "select c.id_curso,c.nombre as 'nombre_curso',c.descripcion, c.fecha_vigencia, c.borrado, ca.id_categoria, ca.nombre as'nombre_categoria',ca.descripcion from Cursos c join Categorias ca on  c.id_categoria= ca.id_categoria";
+            
             DataTable tabla = DBHelper.getDBHelper().ConsultaSQL(query);
             
             foreach (DataRow filas in tabla.Rows)
             {
                 Cursos aux = new Cursos();
+                Categorias aux1 = new Categorias();
+
                 aux.id_curso = Int32.Parse(filas[0].ToString());            //Como se usa un Int32 hay que validar que en el textbox_id no se puedan ingresar más de 32 dígitos
-                aux.nombre = filas[1].ToString();
-                aux.descripcion = filas[2].ToString();
-                aux.fecha_vigencia = DateTime.Parse(filas[3].ToString());
-                aux.id_categoria = Int32.Parse(filas[4].ToString());
-                aux.borrado = bool.Parse(filas[5].ToString());
+                aux.nombreCurso = filas[1].ToString();
+                aux.descripcionCurso = filas[2].ToString();
+                aux.fecha_vigenciaCurso = DateTime.Parse(filas[3].ToString());
+                aux.borradoCurso = bool.Parse(filas[4].ToString());
+
+                aux1.id_categoria = Int32.Parse(filas[5].ToString());
+                aux1.nombreCategoria = filas[6].ToString();
+                aux1.descripcionCategoria = filas[7].ToString();
+                aux.categoriaCurso = aux1;
+
+                lst.Add(aux);
+
             } 
 
             return lst;
@@ -47,10 +57,10 @@ namespace TP_PAVI.Datos.Dao
             {
                 aux = new Cursos();
                 aux.id_curso = Int32.Parse(t.Rows[0][0].ToString());
-                aux.descripcion = t.Rows[0][2].ToString();
-                aux.fecha_vigencia = DateTime.Parse(t.Rows[0][3].ToString());
-                aux.id_categoria = Int32.Parse(t.Rows[0][4].ToString());
-                aux.borrado = bool.Parse(t.Rows[0][5].ToString());
+                aux.descripcionCurso = t.Rows[0][2].ToString();
+                aux.fecha_vigenciaCurso = DateTime.Parse(t.Rows[0][3].ToString());
+                
+                aux.borradoCurso = bool.Parse(t.Rows[0][5].ToString());
             }
             return aux;
         }
@@ -76,10 +86,10 @@ namespace TP_PAVI.Datos.Dao
 
             var parametros = new Dictionary<string, object>();
             parametros.Add("id_curso", ObtenerUltimoId());
-            parametros.Add("nombre", oCursos.nombre);
-            parametros.Add("descripcion", oCursos.descripcion);
-            parametros.Add("fecha_vigencia", oCursos.fecha_vigencia);
-            parametros.Add("id_categoria", oCursos.id_categoria);
+            parametros.Add("nombre", oCursos.nombreCurso);
+            parametros.Add("descripcion", oCursos.descripcionCurso);
+            parametros.Add("fecha_vigencia", oCursos.fecha_vigenciaCurso);
+            parametros.Add("id_categoria", oCursos.categoriaCurso.id_categoria);
 
             // Si una fila es afectada por la inserción retorna TRUE. Caso contrario FALSE
             return (DBHelper.getDBHelper().EjecutarSQL2(str_sql, parametros) == 1);
@@ -96,10 +106,12 @@ namespace TP_PAVI.Datos.Dao
 
             var parametros = new Dictionary<string, object>();
             parametros.Add("id_curso", oCursos.id_curso);
-            parametros.Add("nombre", oCursos.nombre);
-            parametros.Add("descripcion", oCursos.descripcion);
-            parametros.Add("fecha_vigencia", oCursos.fecha_vigencia);
-            parametros.Add("id_categoria", oCursos.id_categoria);
+            parametros.Add("nombre", oCursos.nombreCurso);
+            parametros.Add("descripcion", oCursos.descripcionCurso);
+            parametros.Add("fecha_vigencia", oCursos.fecha_vigenciaCurso);
+
+             // cambiar
+            // cambiar     parametros.Add("id_categoria", oCursos.id_categoria);
 
             // Si una fila es afectada por la actualización retorna TRUE. Caso contrario FALSE
             return (DBHelper.getDBHelper().EjecutarSQL2(str_sql, parametros) == 1);
@@ -119,24 +131,24 @@ namespace TP_PAVI.Datos.Dao
 
         public IList<Cursos> ObtenerCursosPorFiltro(Dictionary<string, object> parametros)
         {
-            List<Cursos> listadoBugs = new List<Cursos>();
+            List<Cursos> listadoCursos = new List<Cursos>();
            
                 //FALTA MODIFICAR ESTE MÉTODO
-            var strSql = String.Concat("SELECT * FROM Cursos WHERE borrado = 0");
+            var strSql = String.Concat("select c.id_curso,c.nombre ,c.descripcion, c.fecha_vigencia, c.borrado, ca.id_categoria, ca.nombre,ca.descripcion from Cursos c join Categorias ca on  c.id_categoria= ca.id_categoria where c.borrado=0");
 
             if (parametros.ContainsKey("nombre"))
-                strSql += " AND (nombre = @nombre) ";
+                strSql += " AND (c.nombre = @nombre) ";
             if (parametros.ContainsKey("id_categoria"))
-                strSql += " AND (id_categoria=@id_categoria)";
+                strSql += " AND (ca.id_categoria=@id_categoria)";
             if (parametros.ContainsKey("fecha_vigencia"))
-                strSql += " AND (fecha_vigencia >= @fecha_vigencia) ";
+                strSql += " AND (c.fecha_vigencia >= @fecha_vigencia) ";
             var resultadoConsulta = (DataRowCollection)DBHelper.getDBHelper().ConsultaSQL2(strSql, parametros).Rows;
 
             foreach (DataRow row in resultadoConsulta)
             {
-                listadoBugs.Add(ObjectMapping(row));
+                listadoCursos.Add(ObjectMapping(row));
             }
-            return listadoBugs;
+            return listadoCursos;
         }
 
 
@@ -144,16 +156,35 @@ namespace TP_PAVI.Datos.Dao
         private Cursos ObjectMapping(DataRow row)
         {
             Cursos oCursos = new Cursos();
-            oCursos.id_curso = Convert.ToInt32(row["id_curso"].ToString());
-            oCursos.nombre = row["nombre"].ToString();
-            oCursos.descripcion = row["descripcion"].ToString();
-            oCursos.fecha_vigencia = Convert.ToDateTime(row["fecha_vigencia"].ToString());
-            oCursos.id_categoria = Convert.ToInt32(row["id_categoria"].ToString());
-            oCursos.borrado = Convert.ToBoolean(row["borrado"].ToString());
+            Categorias aux1 = new Categorias();
+           
+            oCursos.id_curso = Convert.ToInt32(row[0].ToString());
+            oCursos.nombreCurso = row[1].ToString();
+            oCursos.descripcionCurso = row[2].ToString();
+            oCursos.fecha_vigenciaCurso = Convert.ToDateTime(row[3].ToString());
+            oCursos.borradoCurso = Convert.ToBoolean(row[4].ToString());
 
-            //HAY QUE CAMBIAR id_categoria de int a tipo Categoria
+            aux1.id_categoria = Int32.Parse(row [5].ToString());
+            aux1.nombreCategoria = row[6].ToString();
+            aux1.descripcionCategoria = row[7].ToString();
+            oCursos.categoriaCurso = aux1;
+
+            // version anterior
+            /*
+           oCursos.id_curso = Convert.ToInt32(row["id_curso"].ToString());
+           oCursos.nombreCurso = row["nombre_curso"].ToString();
+           oCursos.descripcionCurso = row["descripcion"].ToString();
+           oCursos.fecha_vigenciaCurso = Convert.ToDateTime(row["fecha_vigencia"].ToString());
+           oCursos.borradoCurso = Convert.ToBoolean(row["borrado"].ToString());
+
+           aux1.id_categoria = Int32.Parse(row["id_categoria"].ToString());
+           aux1.nombreCategoria = row["nombre_categoria"].ToString();
+           aux1.descripcionCategoria = row[7].ToString();
+           oCursos.categoriaCurso = aux1;
+            */
 
             return oCursos;
+
         }
 
 

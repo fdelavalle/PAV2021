@@ -1,7 +1,7 @@
 ﻿
 namespace TP_PAVI
 {
-    partial class Form_ABMC_Curso
+    partial class Form_Categoria
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@ namespace TP_PAVI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ABMC_Curso));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Categoria));
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.minBtn = new System.Windows.Forms.PictureBox();
@@ -37,21 +37,16 @@ namespace TP_PAVI
             this.restoreBtn = new System.Windows.Forms.PictureBox();
             this.maxBtn = new System.Windows.Forms.PictureBox();
             this.groupBoxFiltros = new System.Windows.Forms.GroupBox();
+            this.textDescripcion = new System.Windows.Forms.TextBox();
             this.checkBoxCursosEliminados = new System.Windows.Forms.CheckBox();
-            this.groupBoxInfoFecha = new System.Windows.Forms.GroupBox();
-            this.labelInfoFecha = new System.Windows.Forms.Label();
-            this.maskedTextBoxFecha = new System.Windows.Forms.MaskedTextBox();
-            this.infoFecha = new System.Windows.Forms.PictureBox();
-            this.lblFechaCurso = new System.Windows.Forms.Label();
             this.groupBoxInfoCategoria = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxInfoNombre = new System.Windows.Forms.GroupBox();
             this.lblInfoNombre = new System.Windows.Forms.Label();
             this.infoCategorías = new System.Windows.Forms.PictureBox();
             this.buttonConsultar = new System.Windows.Forms.Button();
-            this.dataGridViewCursos = new System.Windows.Forms.DataGridView();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.textBoxNombreCurso = new System.Windows.Forms.TextBox();
-            this.comboBoxCategoriaCurso = new System.Windows.Forms.ComboBox();
             this.labelCategoría = new System.Windows.Forms.Label();
             this.lblNombreCurso = new System.Windows.Forms.Label();
             this.infoNombre = new System.Windows.Forms.PictureBox();
@@ -59,18 +54,17 @@ namespace TP_PAVI
             this.btnEliminarCurso = new System.Windows.Forms.PictureBox();
             this.btnModificarCurso = new System.Windows.Forms.PictureBox();
             this.btnCrearCurso = new System.Windows.Forms.PictureBox();
+            this.ckTodos = new System.Windows.Forms.CheckBox();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
             this.groupBoxFiltros.SuspendLayout();
-            this.groupBoxInfoFecha.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.infoFecha)).BeginInit();
             this.groupBoxInfoCategoria.SuspendLayout();
             this.groupBoxInfoNombre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.infoCategorías)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCurso)).BeginInit();
@@ -99,11 +93,11 @@ namespace TP_PAVI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 19);
+            this.label2.Location = new System.Drawing.Point(21, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Cursos";
+            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Categorias";
             // 
             // minBtn
             // 
@@ -168,18 +162,15 @@ namespace TP_PAVI
             // 
             // groupBoxFiltros
             // 
+            this.groupBoxFiltros.Controls.Add(this.ckTodos);
+            this.groupBoxFiltros.Controls.Add(this.textDescripcion);
             this.groupBoxFiltros.Controls.Add(this.checkBoxCursosEliminados);
-            this.groupBoxFiltros.Controls.Add(this.groupBoxInfoFecha);
-            this.groupBoxFiltros.Controls.Add(this.maskedTextBoxFecha);
-            this.groupBoxFiltros.Controls.Add(this.infoFecha);
-            this.groupBoxFiltros.Controls.Add(this.lblFechaCurso);
             this.groupBoxFiltros.Controls.Add(this.groupBoxInfoCategoria);
             this.groupBoxFiltros.Controls.Add(this.groupBoxInfoNombre);
             this.groupBoxFiltros.Controls.Add(this.infoCategorías);
             this.groupBoxFiltros.Controls.Add(this.buttonConsultar);
-            this.groupBoxFiltros.Controls.Add(this.dataGridViewCursos);
+            this.groupBoxFiltros.Controls.Add(this.dgvCategorias);
             this.groupBoxFiltros.Controls.Add(this.textBoxNombreCurso);
-            this.groupBoxFiltros.Controls.Add(this.comboBoxCategoriaCurso);
             this.groupBoxFiltros.Controls.Add(this.labelCategoría);
             this.groupBoxFiltros.Controls.Add(this.lblNombreCurso);
             this.groupBoxFiltros.Controls.Add(this.infoNombre);
@@ -190,6 +181,15 @@ namespace TP_PAVI
             this.groupBoxFiltros.TabStop = false;
             this.groupBoxFiltros.Text = "Filtros";
             // 
+            // textDescripcion
+            // 
+            this.textDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textDescripcion.Location = new System.Drawing.Point(21, 111);
+            this.textDescripcion.MaxLength = 50;
+            this.textDescripcion.Name = "textDescripcion";
+            this.textDescripcion.Size = new System.Drawing.Size(155, 24);
+            this.textDescripcion.TabIndex = 15;
+            // 
             // checkBoxCursosEliminados
             // 
             this.checkBoxCursosEliminados.AutoSize = true;
@@ -199,56 +199,6 @@ namespace TP_PAVI
             this.checkBoxCursosEliminados.TabIndex = 14;
             this.checkBoxCursosEliminados.Text = "Incluir cursos dados de baja";
             this.checkBoxCursosEliminados.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxInfoFecha
-            // 
-            this.groupBoxInfoFecha.Controls.Add(this.labelInfoFecha);
-            this.groupBoxInfoFecha.Location = new System.Drawing.Point(224, 136);
-            this.groupBoxInfoFecha.Name = "groupBoxInfoFecha";
-            this.groupBoxInfoFecha.Size = new System.Drawing.Size(264, 58);
-            this.groupBoxInfoFecha.TabIndex = 10;
-            this.groupBoxInfoFecha.TabStop = false;
-            this.groupBoxInfoFecha.Visible = false;
-            // 
-            // labelInfoFecha
-            // 
-            this.labelInfoFecha.AutoSize = true;
-            this.labelInfoFecha.Location = new System.Drawing.Point(6, 14);
-            this.labelInfoFecha.Name = "labelInfoFecha";
-            this.labelInfoFecha.Size = new System.Drawing.Size(247, 34);
-            this.labelInfoFecha.TabIndex = 1;
-            this.labelInfoFecha.Text = "Si se deja en blanco o se elige \r\nuna fecha incorrecta se ignora el filtro\r\n";
-            // 
-            // maskedTextBoxFecha
-            // 
-            this.maskedTextBoxFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBoxFecha.Location = new System.Drawing.Point(21, 177);
-            this.maskedTextBoxFecha.Mask = "00/00/0000";
-            this.maskedTextBoxFecha.Name = "maskedTextBoxFecha";
-            this.maskedTextBoxFecha.Size = new System.Drawing.Size(155, 24);
-            this.maskedTextBoxFecha.TabIndex = 13;
-            this.maskedTextBoxFecha.ValidatingType = typeof(System.DateTime);
-            // 
-            // infoFecha
-            // 
-            this.infoFecha.Image = global::TP_PAVI.Properties.Resources.icons8_info_100;
-            this.infoFecha.Location = new System.Drawing.Point(188, 177);
-            this.infoFecha.Name = "infoFecha";
-            this.infoFecha.Size = new System.Drawing.Size(39, 24);
-            this.infoFecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.infoFecha.TabIndex = 12;
-            this.infoFecha.TabStop = false;
-            this.infoFecha.MouseEnter += new System.EventHandler(this.infoFecha_MouseEnter);
-            this.infoFecha.MouseLeave += new System.EventHandler(this.infoFecha_MouseLeave);
-            // 
-            // lblFechaCurso
-            // 
-            this.lblFechaCurso.AutoSize = true;
-            this.lblFechaCurso.Location = new System.Drawing.Point(18, 157);
-            this.lblFechaCurso.Name = "lblFechaCurso";
-            this.lblFechaCurso.Size = new System.Drawing.Size(123, 17);
-            this.lblFechaCurso.TabIndex = 10;
-            this.lblFechaCurso.Text = "Fecha de vigencia";
             // 
             // groupBoxInfoCategoria
             // 
@@ -267,7 +217,7 @@ namespace TP_PAVI
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 34);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Si se deja en blanco ignora el filtro \r\npor categoría";
+            this.label1.Text = "Si se deja en blanco ignora el filtro \r\npor descripcion";
             // 
             // groupBoxInfoNombre
             // 
@@ -303,7 +253,7 @@ namespace TP_PAVI
             // buttonConsultar
             // 
             this.buttonConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConsultar.Location = new System.Drawing.Point(401, 220);
+            this.buttonConsultar.Location = new System.Drawing.Point(401, 210);
             this.buttonConsultar.Name = "buttonConsultar";
             this.buttonConsultar.Size = new System.Drawing.Size(93, 36);
             this.buttonConsultar.TabIndex = 6;
@@ -311,19 +261,18 @@ namespace TP_PAVI
             this.buttonConsultar.UseVisualStyleBackColor = true;
             this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
-            // dataGridViewCursos
+            // dgvCategorias
             // 
-            this.dataGridViewCursos.AllowUserToAddRows = false;
-            this.dataGridViewCursos.AllowUserToDeleteRows = false;
-            this.dataGridViewCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCursos.Location = new System.Drawing.Point(21, 262);
-            this.dataGridViewCursos.Name = "dataGridViewCursos";
-            this.dataGridViewCursos.ReadOnly = true;
-            this.dataGridViewCursos.RowHeadersWidth = 51;
-            this.dataGridViewCursos.RowTemplate.Height = 24;
-            this.dataGridViewCursos.Size = new System.Drawing.Size(473, 212);
-            this.dataGridViewCursos.TabIndex = 5;
-            this.dataGridViewCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCursos_CellClick);
+            this.dgvCategorias.AllowUserToAddRows = false;
+            this.dgvCategorias.AllowUserToDeleteRows = false;
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.Location = new System.Drawing.Point(21, 262);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.ReadOnly = true;
+            this.dgvCategorias.RowHeadersWidth = 51;
+            this.dgvCategorias.RowTemplate.Height = 24;
+            this.dgvCategorias.Size = new System.Drawing.Size(473, 212);
+            this.dgvCategorias.TabIndex = 5;
             // 
             // textBoxNombreCurso
             // 
@@ -334,24 +283,14 @@ namespace TP_PAVI
             this.textBoxNombreCurso.Size = new System.Drawing.Size(155, 24);
             this.textBoxNombreCurso.TabIndex = 4;
             // 
-            // comboBoxCategoriaCurso
-            // 
-            this.comboBoxCategoriaCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCategoriaCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCategoriaCurso.FormattingEnabled = true;
-            this.comboBoxCategoriaCurso.Location = new System.Drawing.Point(21, 111);
-            this.comboBoxCategoriaCurso.Name = "comboBoxCategoriaCurso";
-            this.comboBoxCategoriaCurso.Size = new System.Drawing.Size(155, 26);
-            this.comboBoxCategoriaCurso.TabIndex = 3;
-            // 
             // labelCategoría
             // 
             this.labelCategoría.AutoSize = true;
             this.labelCategoría.Location = new System.Drawing.Point(18, 91);
             this.labelCategoría.Name = "labelCategoría";
-            this.labelCategoría.Size = new System.Drawing.Size(69, 17);
+            this.labelCategoría.Size = new System.Drawing.Size(82, 17);
             this.labelCategoría.TabIndex = 2;
-            this.labelCategoría.Text = "Categoría";
+            this.labelCategoría.Text = "Descripcion";
             // 
             // lblNombreCurso
             // 
@@ -392,7 +331,6 @@ namespace TP_PAVI
             // btnEliminarCurso
             // 
             this.btnEliminarCurso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarCurso.Enabled = false;
             this.btnEliminarCurso.Image = global::TP_PAVI.Properties.Resources.eliminar;
             this.btnEliminarCurso.Location = new System.Drawing.Point(200, 549);
             this.btnEliminarCurso.Name = "btnEliminarCurso";
@@ -407,7 +345,6 @@ namespace TP_PAVI
             // btnModificarCurso
             // 
             this.btnModificarCurso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarCurso.Enabled = false;
             this.btnModificarCurso.Image = global::TP_PAVI.Properties.Resources.editar;
             this.btnModificarCurso.Location = new System.Drawing.Point(106, 549);
             this.btnModificarCurso.Name = "btnModificarCurso";
@@ -433,7 +370,17 @@ namespace TP_PAVI
             this.btnCrearCurso.MouseEnter += new System.EventHandler(this.btnCrearCurso_MouseEnter);
             this.btnCrearCurso.MouseLeave += new System.EventHandler(this.btnCrearCurso_MouseLeave);
             // 
-            // Form_ABMC_Curso
+            // ckTodos
+            // 
+            this.ckTodos.AutoSize = true;
+            this.ckTodos.Location = new System.Drawing.Point(280, 220);
+            this.ckTodos.Name = "ckTodos";
+            this.ckTodos.Size = new System.Drawing.Size(85, 21);
+            this.ckTodos.TabIndex = 16;
+            this.ckTodos.Text = "Sin Filtro";
+            this.ckTodos.UseVisualStyleBackColor = true;
+            // 
+            // Form_Categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -445,10 +392,9 @@ namespace TP_PAVI
             this.Controls.Add(this.groupBoxFiltros);
             this.Controls.Add(this.panelBarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_ABMC_Curso";
+            this.Name = "Form_Categoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form_ABMC_Curso_Load);
             this.panelBarraTitulo.ResumeLayout(false);
             this.panelBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).EndInit();
@@ -457,15 +403,12 @@ namespace TP_PAVI
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).EndInit();
             this.groupBoxFiltros.ResumeLayout(false);
             this.groupBoxFiltros.PerformLayout();
-            this.groupBoxInfoFecha.ResumeLayout(false);
-            this.groupBoxInfoFecha.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.infoFecha)).EndInit();
             this.groupBoxInfoCategoria.ResumeLayout(false);
             this.groupBoxInfoCategoria.PerformLayout();
             this.groupBoxInfoNombre.ResumeLayout(false);
             this.groupBoxInfoNombre.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.infoCategorías)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCurso)).EndInit();
@@ -488,23 +431,19 @@ namespace TP_PAVI
         private System.Windows.Forms.PictureBox btnEliminarCurso;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Button buttonConsultar;
-        private System.Windows.Forms.DataGridView dataGridViewCursos;
+        private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.TextBox textBoxNombreCurso;
-        private System.Windows.Forms.ComboBox comboBoxCategoriaCurso;
-        private System.Windows.Forms.Label labelCategoría;
         private System.Windows.Forms.Label lblNombreCurso;
-        private System.Windows.Forms.PictureBox infoCategorías;
-        private System.Windows.Forms.GroupBox groupBoxInfoCategoria;
         private System.Windows.Forms.GroupBox groupBoxInfoNombre;
         private System.Windows.Forms.Label lblInfoNombre;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxFecha;
-        private System.Windows.Forms.PictureBox infoFecha;
-        private System.Windows.Forms.Label lblFechaCurso;
-        private System.Windows.Forms.GroupBox groupBoxInfoFecha;
-        private System.Windows.Forms.Label labelInfoFecha;
         private System.Windows.Forms.CheckBox checkBoxCursosEliminados;
+        private System.Windows.Forms.TextBox textDescripcion;
+        private System.Windows.Forms.GroupBox groupBoxInfoCategoria;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox infoCategorías;
+        private System.Windows.Forms.Label labelCategoría;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox ckTodos;
     }
 }
 

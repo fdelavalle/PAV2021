@@ -1,7 +1,7 @@
 ﻿
 namespace TP_PAVI
 {
-    partial class Form_AM_Curso
+    partial class Form_AM_Categoria
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@ namespace TP_PAVI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AM_Curso));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AM_Categoria));
             this.restoreBtn = new System.Windows.Forms.PictureBox();
             this.maxBtn = new System.Windows.Forms.PictureBox();
             this.closeBtn = new System.Windows.Forms.PictureBox();
@@ -38,12 +38,8 @@ namespace TP_PAVI
             this.labelTitulo = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelDescripcion = new System.Windows.Forms.Label();
-            this.labelFecha = new System.Windows.Forms.Label();
-            this.labelCategoria = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxFecha = new System.Windows.Forms.MaskedTextBox();
-            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
@@ -137,9 +133,9 @@ namespace TP_PAVI
             this.labelTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitulo.Location = new System.Drawing.Point(12, 12);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(63, 20);
+            this.labelTitulo.Size = new System.Drawing.Size(90, 20);
             this.labelTitulo.TabIndex = 4;
-            this.labelTitulo.Text = "Cursos";
+            this.labelTitulo.Text = "Categorias";
             // 
             // labelNombre
             // 
@@ -161,26 +157,6 @@ namespace TP_PAVI
             this.labelDescripcion.TabIndex = 2;
             this.labelDescripcion.Text = "Descripción";
             // 
-            // labelFecha
-            // 
-            this.labelFecha.AutoSize = true;
-            this.labelFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFecha.Location = new System.Drawing.Point(49, 227);
-            this.labelFecha.Name = "labelFecha";
-            this.labelFecha.Size = new System.Drawing.Size(122, 18);
-            this.labelFecha.TabIndex = 3;
-            this.labelFecha.Text = "Fecha vigencia(*)";
-            // 
-            // labelCategoria
-            // 
-            this.labelCategoria.AutoSize = true;
-            this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCategoria.Location = new System.Drawing.Point(49, 290);
-            this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(92, 18);
-            this.labelCategoria.TabIndex = 4;
-            this.labelCategoria.Text = "Categoría (*)";
-            // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(52, 94);
@@ -196,26 +172,6 @@ namespace TP_PAVI
             this.textBoxDescripcion.Size = new System.Drawing.Size(285, 61);
             this.textBoxDescripcion.TabIndex = 6;
             this.textBoxDescripcion.Text = "\r\n\r\n\r\n\r\n\r\n";
-            // 
-            // maskedTextBoxFecha
-            // 
-            this.maskedTextBoxFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBoxFecha.Location = new System.Drawing.Point(52, 248);
-            this.maskedTextBoxFecha.Mask = "00/00/0000";
-            this.maskedTextBoxFecha.Name = "maskedTextBoxFecha";
-            this.maskedTextBoxFecha.Size = new System.Drawing.Size(125, 24);
-            this.maskedTextBoxFecha.TabIndex = 7;
-            this.maskedTextBoxFecha.ValidatingType = typeof(System.DateTime);
-            // 
-            // comboBoxCategoria
-            // 
-            this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Location = new System.Drawing.Point(52, 311);
-            this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(125, 26);
-            this.comboBoxCategoria.TabIndex = 8;
             // 
             // buttonAceptar
             // 
@@ -237,27 +193,22 @@ namespace TP_PAVI
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // Form_AM_Curso
+            // Form_AM_Categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 421);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAceptar);
-            this.Controls.Add(this.comboBoxCategoria);
-            this.Controls.Add(this.maskedTextBoxFecha);
             this.Controls.Add(this.textBoxDescripcion);
             this.Controls.Add(this.textBoxNombre);
-            this.Controls.Add(this.labelCategoria);
-            this.Controls.Add(this.labelFecha);
             this.Controls.Add(this.labelDescripcion);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.panelBarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_AM_Curso";
+            this.Name = "Form_AM_Categoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form_AM_Curso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
@@ -277,12 +228,8 @@ namespace TP_PAVI
         private System.Windows.Forms.Panel panelBarraTitulo;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelDescripcion;
-        private System.Windows.Forms.Label labelFecha;
-        private System.Windows.Forms.Label labelCategoria;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxDescripcion;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxFecha;
-        private System.Windows.Forms.ComboBox comboBoxCategoria;
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label labelTitulo;

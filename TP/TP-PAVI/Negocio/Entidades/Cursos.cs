@@ -3,21 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TP_PAVI.Negocio.Entidades;
 
 namespace TP_PAVI.Clases
 {
     public class Cursos
     {
         public int id_curso { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
-        public DateTime fecha_vigencia { get; set; }
-        public int id_categoria  { get; set; }
-        public bool borrado { get; set; }
+        public string nombreCurso { get; set; }
+        public string descripcionCurso { get; set; }
+        public DateTime fecha_vigenciaCurso { get; set; }
 
-        public Cursos()
+        public bool borradoCurso { get; set; }
+
+       public Categorias categoriaCurso { get; set; }
+
+        public override string ToString()
         {
-
+            return nombreCurso;
         }
+
+       
+
+
     }
 }

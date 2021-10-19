@@ -62,6 +62,18 @@
     <Compile Include="Negocio\Entidades\Usuario.cs" />
     <Compile Include="Negocio\Entidades\UsuariosCurso.cs" />
     <Compile Include="Negocio\Entidades\UsuariosCursoAvance.cs" />
+    <Compile Include="Presentación\Form_AM_Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Form_AM_Categoria.Designer.cs">
+      <DependentUpon>Form_AM_Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Form_Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Form_Categoria.Designer.cs">
+      <DependentUpon>Form_Categoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\Form_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TP_PAVI_ExtendidoDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentación\Form_AM_Categoria.resx">
+      <DependentUpon>Form_AM_Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Form_Categoria.resx">
+      <DependentUpon>Form_Categoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Form_Menu.resx">
       <DependentUpon>Form_Menu.cs</DependentUpon>
     </EmbeddedResource>

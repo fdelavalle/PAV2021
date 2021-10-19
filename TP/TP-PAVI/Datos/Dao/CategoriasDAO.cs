@@ -12,18 +12,27 @@ namespace TP_PAVI.Datos.Dao
     {
         public IList<Categorias> FindAll()
         {
-            List<Categorias> listadoBugs = new List<Categorias>();
+            List<Categorias> catego = new List<Categorias>();
 
-            var strSql = "SELECT id_categoria, nombre from Categorias";
+            var strSql = "SELECT * from Categorias";
 
-            var resultadoConsulta = DBHelper.getDBHelper().ConsultaSQL(strSql);
+            var resultado = DBHelper.getDBHelper().ConsultaSQL(strSql);
 
-            foreach (DataRow row in resultadoConsulta.Rows)
+            if (resultado.Rows.Count > 0)
             {
-                listadoBugs.Add(ObjectMapping(row));
+                foreach (DataRow filas in resultado.Rows)
+                {
+                    Categorias aux = new Categorias();
+                    aux.id_categoria = Int32.Parse(filas[0].ToString());
+                    aux.nombreCategoria = filas[1].ToString();
+                    aux.descripcionCategoria = filas[2].ToString();
+                    catego.Add(aux);
+                }
             }
+            
+           
 
-            return listadoBugs;
+            return catego;
         }
 
         private Categorias ObjectMapping(DataRow row)
@@ -31,7 +40,7 @@ namespace TP_PAVI.Datos.Dao
             Categorias oCategorias = new Categorias
             {
                 id_categoria = Convert.ToInt32(row["id_categoria"].ToString()),
-                nombre = row["nombre"].ToString()
+                nombreCategoria = row["nombre"].ToString()
             };
 
             return oCategorias;

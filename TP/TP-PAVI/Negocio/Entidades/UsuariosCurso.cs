@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TP_PAVI.Negocio.Entidades;
 
 namespace TP_PAVI.Clases
 {
     class UsuariosCurso
     {
-        public int id_usuario { get; set; }
-        public int id_curso { get; set; }
+        public Usuario usuario { get; set; }
+        public Cursos curso { get; set; }
         public int puntuacion { get; set; }
         public string observaciones { get; set; }
-        public DateTime fecha_inicio { get; set; }
-        public DateTime fecha_fin { get; set; }
-        public int usuario_curso_avance { get; set; }
+        public DateTime fecha_inicioUsuariosCurso { get; set; }
+        public DateTime fecha_finUsuariosCurso { get; set; }
+        
     }
 }

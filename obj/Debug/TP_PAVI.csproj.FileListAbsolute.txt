@@ -1,0 +1,16 @@
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.FormPlantilla.resources
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Properties.Resources.resources
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.csproj.GenerateResource.cache
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.csproj.CoreCompileInputs.cache
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\bin\Debug\TP_PAVI.exe.config
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\bin\Debug\TP_PAVI.exe
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\bin\Debug\TP_PAVI.pdb
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.exe
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.pdb
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Form_Plantilla_ABMC.resources
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.csproj.AssemblyReference.cache
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Form_InicioSesion.resources
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Form_MenuPrincipal.resources
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_ABMC_Curso.resources
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_AltaCurso.resources
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_ModificacionCurso.resources

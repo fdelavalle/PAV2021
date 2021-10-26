@@ -16,22 +16,55 @@ namespace TP_PAVI
     {
 
 
-        private GestorCursos oGestorCurso;
+        private GestorCategorias oGestorCategoria;
         private readonly GestorCategorias oGestorCategorias;
         public Form_Categoria()
         {
             InitializeComponent();
-            oGestorCurso = new GestorCursos();
-            oGestorCategorias = new GestorCategorias();
+            InitializeDataGridView();
+            oGestorCategoria = new GestorCategorias();
+          
         }
 
-        private void Form_Curso_Load(object sender, EventArgs e)
+        private void InitializeDataGridView()
         {
-            //LlenarCombo(comboBoxCategoríaCurso, oGestorCategorias.ObtenerTodos(), "nombre", "id_categoria");
+
+            // Cree un DataGridView no vinculado declarando un recuento de columnas.
+            dgvCategorias.ColumnCount = 3;
+            dgvCategorias.ColumnHeadersVisible = true;
+
+            // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
+            dgvCategorias.AutoGenerateColumns = false;
+
+            // Cambia el estilo de la cabecera de la grilla.
+            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+
+            columnHeaderStyle.BackColor = Color.Beige;
+            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            dgvCategorias.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+
+            // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
+            dgvCategorias.Columns[0].Name = "Nombre";
+            dgvCategorias.Columns[0].DataPropertyName = "NombreCategoria";
+            // Definimos el ancho de la columna.
+
+            dgvCategorias.Columns[1].Name = "Descripcion";
+            dgvCategorias.Columns[1].DataPropertyName = "DescripcionCategoria";
+
+            
+            dgvCategorias.Columns[2].Name = "Borrado";
+            dgvCategorias.Columns[2].DataPropertyName = "borradoCategoria";
+
+
+
+            // Cambia el tamaño de la altura de los encabezados de columna.
+            dgvCategorias.AutoResizeColumnHeadersHeight();
+
+            // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
+            dgvCategorias.AutoResizeRows(
+                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+
         }
-
-
-
 
         int m, mx, my;
         private void panelBarraTitulo_MouseDown(object sender, MouseEventArgs e)
@@ -207,12 +240,12 @@ namespace TP_PAVI
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
         {
-            Form_AM_Curso formulario = new Form_AM_Curso();
+            Form_AM_Categoria formulario = new Form_AM_Categoria();
 
             // Asi obtenemos el item seleccionado de la grilla.
-            var curso = (Cursos)dgvCategorias.CurrentRow.DataBoundItem;
+            var categoria = (Categorias)dgvCategorias.CurrentRow.DataBoundItem;
 
-            formulario.InicializarFormulario(Form_AM_Curso.FormMode.eliminar, curso);
+            formulario.InicializarFormulario(Form_AM_Categoria.FormMode.eliminar, categoria);
             formulario.ShowDialog();
 
             //Forzamos el evento Click para actualizar el DataGridView.
@@ -221,9 +254,9 @@ namespace TP_PAVI
 
         private void btnModificarCurso_Click(object sender, EventArgs e)
         {
-            Form_AM_Curso form = new Form_AM_Curso();
-            var curso = (Cursos)dgvCategorias.CurrentRow.DataBoundItem;
-            form.InicializarFormulario(Form_AM_Curso.FormMode.actualizar, curso);
+            Form_AM_Categoria form = new Form_AM_Categoria();
+            var categoria = (Categorias)dgvCategorias.CurrentRow.DataBoundItem;
+            form.InicializarFormulario(Form_AM_Categoria.FormMode.actualizar, categoria);
             form.ShowDialog();
             //Forzamos el evento Click para actualizar el DataGridView.
             buttonConsultar_Click(sender, e);
@@ -236,22 +269,56 @@ namespace TP_PAVI
             buttonConsultar_Click(sender, e);
         }
 
+        private void groupBoxFiltros_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnModificarCurso.Enabled = true;
+            btnEliminarCurso.Enabled = true;
+        }
+
+        private void Form_Categoria_Load(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
         private void buttonConsultar_Click(object sender, EventArgs e)
         // AGREGAR SI SE FILTRAN O NO LOS CURSOS DADOS DE BAJA AGREGANDO OTRO PARÁMETRO
         {
             // Dictionary: Representa una colección de claves y valores.
             Dictionary<string, object> parametros = new Dictionary<string, object>();
+            IList<Categorias> listadoCategorias;
 
-            if (!string.IsNullOrEmpty(textBoxNombreCurso.Text))
+            if (!checkBoxCursosEliminados.Checked)
             {
-                parametros.Add("nombre", textBoxNombreCurso.Text);
+
+                if (!string.IsNullOrEmpty(textBoxNombreCurso.Text))
+                {
+                    parametros.Add("nombre", textBoxNombreCurso.Text);
+                }
+
+
+
+                listadoCategorias = oGestorCategoria.ConsultarCategoriasConFiltro(parametros);
+
+                dgvCategorias.DataSource = listadoCategorias;
+
+                
             }
 
-           
+            else
+            {
+                listadoCategorias = oGestorCategoria.ObtenerTodos();
+                dgvCategorias.DataSource = listadoCategorias;
+                
 
-            IList<Cursos> listadoBugs = oGestorCurso.ConsultarCursosConFiltro(parametros);
-
-            dgvCategorias.DataSource = listadoBugs;
+            }
 
             if (dgvCategorias.Rows.Count == 0)
             {
@@ -260,19 +327,9 @@ namespace TP_PAVI
 
         }
 
-        private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
-        {
-            cbo.DataSource = source;
-            cbo.DisplayMember = display;
-            cbo.ValueMember = value;
-            cbo.SelectedIndex = -1;
-        }
+        
 
 
-
-        //https://www.youtube.com/watch?v=kbA8QdHvAQg&ab_channel=Rub%C3%A9nAnibalRomero
-        //1:51:00 VER COMO MODIFICAR LA DATAGRIDVIEW
-        //2:04:00 PARA CAMBIAR LOS ATRIBUTOS DE TIPO INT A SU CLASE CORRESPONDIENTE
-
+        
     }
 }

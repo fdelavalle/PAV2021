@@ -54,7 +54,6 @@ namespace TP_PAVI
             this.btnEliminarCurso = new System.Windows.Forms.PictureBox();
             this.btnModificarCurso = new System.Windows.Forms.PictureBox();
             this.btnCrearCurso = new System.Windows.Forms.PictureBox();
-            this.ckTodos = new System.Windows.Forms.CheckBox();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
@@ -83,7 +82,7 @@ namespace TP_PAVI
             this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(543, 47);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(537, 47);
             this.panelBarraTitulo.TabIndex = 0;
             this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
             this.panelBarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseMove);
@@ -104,7 +103,7 @@ namespace TP_PAVI
             this.minBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minBtn.Image = ((System.Drawing.Image)(resources.GetObject("minBtn.Image")));
-            this.minBtn.Location = new System.Drawing.Point(444, 11);
+            this.minBtn.Location = new System.Drawing.Point(438, 11);
             this.minBtn.Name = "minBtn";
             this.minBtn.Size = new System.Drawing.Size(25, 25);
             this.minBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,7 +118,7 @@ namespace TP_PAVI
             this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(506, 11);
+            this.closeBtn.Location = new System.Drawing.Point(500, 11);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(25, 25);
             this.closeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,7 +133,7 @@ namespace TP_PAVI
             this.restoreBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restoreBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.restoreBtn.Image = ((System.Drawing.Image)(resources.GetObject("restoreBtn.Image")));
-            this.restoreBtn.Location = new System.Drawing.Point(475, 12);
+            this.restoreBtn.Location = new System.Drawing.Point(469, 12);
             this.restoreBtn.Name = "restoreBtn";
             this.restoreBtn.Size = new System.Drawing.Size(25, 25);
             this.restoreBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -150,7 +149,7 @@ namespace TP_PAVI
             this.maxBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maxBtn.Image = ((System.Drawing.Image)(resources.GetObject("maxBtn.Image")));
-            this.maxBtn.Location = new System.Drawing.Point(475, 11);
+            this.maxBtn.Location = new System.Drawing.Point(469, 11);
             this.maxBtn.Name = "maxBtn";
             this.maxBtn.Size = new System.Drawing.Size(25, 25);
             this.maxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,7 +161,6 @@ namespace TP_PAVI
             // 
             // groupBoxFiltros
             // 
-            this.groupBoxFiltros.Controls.Add(this.ckTodos);
             this.groupBoxFiltros.Controls.Add(this.textDescripcion);
             this.groupBoxFiltros.Controls.Add(this.checkBoxCursosEliminados);
             this.groupBoxFiltros.Controls.Add(this.groupBoxInfoCategoria);
@@ -180,6 +178,7 @@ namespace TP_PAVI
             this.groupBoxFiltros.TabIndex = 1;
             this.groupBoxFiltros.TabStop = false;
             this.groupBoxFiltros.Text = "Filtros";
+            this.groupBoxFiltros.Enter += new System.EventHandler(this.groupBoxFiltros_Enter);
             // 
             // textDescripcion
             // 
@@ -195,9 +194,9 @@ namespace TP_PAVI
             this.checkBoxCursosEliminados.AutoSize = true;
             this.checkBoxCursosEliminados.Location = new System.Drawing.Point(21, 220);
             this.checkBoxCursosEliminados.Name = "checkBoxCursosEliminados";
-            this.checkBoxCursosEliminados.Size = new System.Drawing.Size(207, 21);
+            this.checkBoxCursosEliminados.Size = new System.Drawing.Size(231, 21);
             this.checkBoxCursosEliminados.TabIndex = 14;
-            this.checkBoxCursosEliminados.Text = "Incluir cursos dados de baja";
+            this.checkBoxCursosEliminados.Text = "Incluir categorias dadas de baja";
             this.checkBoxCursosEliminados.UseVisualStyleBackColor = true;
             // 
             // groupBoxInfoCategoria
@@ -273,6 +272,7 @@ namespace TP_PAVI
             this.dgvCategorias.RowTemplate.Height = 24;
             this.dgvCategorias.Size = new System.Drawing.Size(473, 212);
             this.dgvCategorias.TabIndex = 5;
+            this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellClick);
             // 
             // textBoxNombreCurso
             // 
@@ -331,6 +331,7 @@ namespace TP_PAVI
             // btnEliminarCurso
             // 
             this.btnEliminarCurso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarCurso.Enabled = false;
             this.btnEliminarCurso.Image = global::TP_PAVI.Properties.Resources.eliminar;
             this.btnEliminarCurso.Location = new System.Drawing.Point(200, 549);
             this.btnEliminarCurso.Name = "btnEliminarCurso";
@@ -345,6 +346,7 @@ namespace TP_PAVI
             // btnModificarCurso
             // 
             this.btnModificarCurso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarCurso.Enabled = false;
             this.btnModificarCurso.Image = global::TP_PAVI.Properties.Resources.editar;
             this.btnModificarCurso.Location = new System.Drawing.Point(106, 549);
             this.btnModificarCurso.Name = "btnModificarCurso";
@@ -370,21 +372,11 @@ namespace TP_PAVI
             this.btnCrearCurso.MouseEnter += new System.EventHandler(this.btnCrearCurso_MouseEnter);
             this.btnCrearCurso.MouseLeave += new System.EventHandler(this.btnCrearCurso_MouseLeave);
             // 
-            // ckTodos
-            // 
-            this.ckTodos.AutoSize = true;
-            this.ckTodos.Location = new System.Drawing.Point(280, 220);
-            this.ckTodos.Name = "ckTodos";
-            this.ckTodos.Size = new System.Drawing.Size(85, 21);
-            this.ckTodos.TabIndex = 16;
-            this.ckTodos.Text = "Sin Filtro";
-            this.ckTodos.UseVisualStyleBackColor = true;
-            // 
             // Form_Categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 611);
+            this.ClientSize = new System.Drawing.Size(537, 611);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarCurso);
             this.Controls.Add(this.btnModificarCurso);
@@ -395,6 +387,7 @@ namespace TP_PAVI
             this.Name = "Form_Categoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form_Categoria_Load);
             this.panelBarraTitulo.ResumeLayout(false);
             this.panelBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).EndInit();
@@ -443,7 +436,6 @@ namespace TP_PAVI
         private System.Windows.Forms.PictureBox infoCategorías;
         private System.Windows.Forms.Label labelCategoría;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox ckTodos;
     }
 }
 

@@ -209,6 +209,7 @@ namespace TP_PAVI
             this.Name = "Form_AM_Categoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form_AM_Categoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();

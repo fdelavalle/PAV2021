@@ -14,3 +14,4 @@ D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entr
 D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_ABMC_Curso.resources
 D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_AltaCurso.resources
 D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_ModificacionCurso.resources
+D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_AvancePorCurso.resources

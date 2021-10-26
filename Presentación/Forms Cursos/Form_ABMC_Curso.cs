@@ -104,9 +104,9 @@ namespace TP_PAVI.Presentación.Forms_Cursos
                 parametros.Add("id_categoria", id_categoria);
             }
 
-            IList<Cursos> listadoBugs = oGestorCurso.ConsultarCursosConFiltro(parametros, dadosBaja);
+            IList<Cursos> listadoCursos = oGestorCurso.ConsultarCursosConFiltro(parametros, dadosBaja);
 
-            dataGridViewCursos.DataSource = listadoBugs;
+            dataGridViewCursos.DataSource = listadoCursos;
 
             if (dataGridViewCursos.Rows.Count == 0)
             {

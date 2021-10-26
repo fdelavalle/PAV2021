@@ -37,5 +37,12 @@ namespace TP_PAVI.Presentación
             this.Close();
 
         }
+
+        private void actualizaciónAvancesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_AvancePorCurso frmAvance = new Form_AvancePorCurso();
+            frmAvance.Show();
+            this.Close();
+        }
     }
 }

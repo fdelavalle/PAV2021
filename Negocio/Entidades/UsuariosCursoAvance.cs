@@ -7,7 +7,7 @@ using TP_PAVI.Negocio.Entidades;
 
 namespace TP_PAVI.Clases
 {
-    class UsuariosCursoAvance
+    public class UsuariosCursoAvance
     {
         public Usuario usuario { get; set; }
         public Cursos curso { get; set; }

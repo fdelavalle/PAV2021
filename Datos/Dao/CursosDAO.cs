@@ -14,22 +14,24 @@ namespace TP_PAVI.Datos.Dao
     {
         public List<Cursos> FindAll()      //Listar todos los cursos ordenados alfabéticamente
         {
-            List<Cursos> lst = new List<Cursos>();
-            string query = "SELECT * FROM CURSOS ORDER BY nombre";
-            DataTable tabla = DBHelper.getDBHelper().ConsultaSQL(query);
-            
-            foreach (DataRow filas in tabla.Rows)
-            {
-                Cursos aux = new Cursos();
-                aux.id_curso = Int32.Parse(filas[0].ToString());    //Como se usa un Int32 hay que validar que en el textbox_id no se puedan ingresar más de 32 dígitos
-                aux.nombre = filas[1].ToString();
-                aux.descripcion = filas[2].ToString();
-                aux.fecha_vigencia = DateTime.Parse(filas[3].ToString());
-                aux.categoria.id_categoria = Int32.Parse(filas[4].ToString());
-                aux.borrado = bool.Parse(filas[5].ToString());
-            } 
+            List<Cursos> listadoCurso = new List<Cursos>();
+            var strSql = "";
+            strSql = String.Concat("SELECT c.id_curso as cId, c.nombre as cNombre, " +
+                              "c.descripcion as cDescripcion, c.borrado as cBorrado, " +
+                              "c.fecha_vigencia as cFecha, " +
+                              "ca.id_categoria as caId, ca.nombre as caNombre, " +
+                              "ca.Descripcion as caDescripcion, ca.borrado as caBorrado " +
+                              "FROM Cursos c JOIN Categorias ca ON ca.id_categoria = c.id_categoria " +
+                              "WHERE c.borrado = 0 ORDER BY c.id_curso ");
+            DataTable tabla = DBHelper.getDBHelper().ConsultaSQL(strSql);
 
-            return lst;
+
+            foreach (DataRow row in tabla.Rows)
+            {
+                listadoCurso.Add(ObjectMapping(row));
+            }
+
+            return listadoCurso;
         }
 
 

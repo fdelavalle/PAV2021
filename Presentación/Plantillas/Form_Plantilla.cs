@@ -111,7 +111,13 @@ namespace TP_PAVI
             this.restoreBtn.Image = ((System.Drawing.Image)(Properties.Resources.res));
         }
 
-
+        public void LlenarCombo(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.DisplayMember = display;
+            cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
+        }
 
 
 

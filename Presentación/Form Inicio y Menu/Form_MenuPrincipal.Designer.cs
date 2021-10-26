@@ -32,10 +32,10 @@ namespace TP_PAVI.Presentación
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.objetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestiónDeCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaciónAvancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDeCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.objetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaciónDeObjetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
@@ -63,7 +63,7 @@ namespace TP_PAVI.Presentación
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(732, 11);
+            this.maxBtn.Location = new System.Drawing.Point(772, 11);
             // 
             // menuStrip1
             // 
@@ -95,6 +95,13 @@ namespace TP_PAVI.Presentación
             this.gestiónDeCursosToolStripMenuItem.Text = "Gestión de Cursos";
             this.gestiónDeCursosToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeCursosToolStripMenuItem_Click);
             // 
+            // actualizaciónAvancesToolStripMenuItem
+            // 
+            this.actualizaciónAvancesToolStripMenuItem.Name = "actualizaciónAvancesToolStripMenuItem";
+            this.actualizaciónAvancesToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.actualizaciónAvancesToolStripMenuItem.Text = "Actualización avances";
+            this.actualizaciónAvancesToolStripMenuItem.Click += new System.EventHandler(this.actualizaciónAvancesToolStripMenuItem_Click);
+            // 
             // categoríasToolStripMenuItem
             // 
             this.categoríasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -103,6 +110,12 @@ namespace TP_PAVI.Presentación
             this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.categoríasToolStripMenuItem.Text = "Categorías";
             // 
+            // gestiónDeCategoríasToolStripMenuItem
+            // 
+            this.gestiónDeCategoríasToolStripMenuItem.Name = "gestiónDeCategoríasToolStripMenuItem";
+            this.gestiónDeCategoríasToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.gestiónDeCategoríasToolStripMenuItem.Text = "Gestión de Categorías";
+            // 
             // objetivosToolStripMenuItem
             // 
             this.objetivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -110,18 +123,6 @@ namespace TP_PAVI.Presentación
             this.objetivosToolStripMenuItem.Name = "objetivosToolStripMenuItem";
             this.objetivosToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.objetivosToolStripMenuItem.Text = "Objetivos";
-            // 
-            // gestiónDeCategoríasToolStripMenuItem
-            // 
-            this.gestiónDeCategoríasToolStripMenuItem.Name = "gestiónDeCategoríasToolStripMenuItem";
-            this.gestiónDeCategoríasToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.gestiónDeCategoríasToolStripMenuItem.Text = "Gestión de Categorías";
-            // 
-            // actualizaciónAvancesToolStripMenuItem
-            // 
-            this.actualizaciónAvancesToolStripMenuItem.Name = "actualizaciónAvancesToolStripMenuItem";
-            this.actualizaciónAvancesToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
-            this.actualizaciónAvancesToolStripMenuItem.Text = "Actualización avances";
             // 
             // actualizaciónDeObjetivosToolStripMenuItem
             // 

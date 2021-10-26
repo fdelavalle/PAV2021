@@ -65,7 +65,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(501, 12);
+            this.maxBtn.Location = new System.Drawing.Point(501, 11);
             // 
             // Nombre
             // 
@@ -113,7 +113,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.maskedTextBoxFecha.Mask = "00/00/0000";
             this.maskedTextBoxFecha.Name = "maskedTextBoxFecha";
             this.maskedTextBoxFecha.Size = new System.Drawing.Size(217, 22);
-            this.maskedTextBoxFecha.TabIndex = 5;
+            this.maskedTextBoxFecha.TabIndex = 2;
             this.maskedTextBoxFecha.ValidatingType = typeof(System.DateTime);
             // 
             // textBoxDescripcion
@@ -122,14 +122,14 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(216, 93);
-            this.textBoxDescripcion.TabIndex = 6;
+            this.textBoxDescripcion.TabIndex = 3;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(206, 84);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(217, 22);
-            this.textBoxNombre.TabIndex = 7;
+            this.textBoxNombre.TabIndex = 0;
             // 
             // comboBoxCategoria
             // 
@@ -137,7 +137,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.comboBoxCategoria.Location = new System.Drawing.Point(206, 116);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(217, 24);
-            this.comboBoxCategoria.TabIndex = 8;
+            this.comboBoxCategoria.TabIndex = 1;
             // 
             // pictureBoxRegresar
             // 
@@ -158,7 +158,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.buttonConfirmar.Location = new System.Drawing.Point(296, 273);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(127, 43);
-            this.buttonConfirmar.TabIndex = 10;
+            this.buttonConfirmar.TabIndex = 4;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);

@@ -58,12 +58,6 @@ namespace TP_PAVI.Presentación
             this.btnCrear.Image = ((System.Drawing.Image)(Properties.Resources.icons8_create_90));
         }
 
-        public void LlenarCombo(ComboBox cbo, Object source, string display, String value)
-        {
-            cbo.DataSource = source;
-            cbo.DisplayMember = display;
-            cbo.ValueMember = value;
-            cbo.SelectedIndex = -1;
-        }
+
     }
 }

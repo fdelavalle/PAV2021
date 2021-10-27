@@ -63,7 +63,7 @@ namespace TP_PAVI.Presentación
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(772, 11);
+            this.maxBtn.Location = new System.Drawing.Point(812, 11);
             // 
             // menuStrip1
             // 
@@ -115,6 +115,7 @@ namespace TP_PAVI.Presentación
             this.gestiónDeCategoríasToolStripMenuItem.Name = "gestiónDeCategoríasToolStripMenuItem";
             this.gestiónDeCategoríasToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.gestiónDeCategoríasToolStripMenuItem.Text = "Gestión de Categorías";
+            this.gestiónDeCategoríasToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeCategoríasToolStripMenuItem_Click);
             // 
             // objetivosToolStripMenuItem
             // 

@@ -15,3 +15,22 @@ D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entr
 D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_AltaCurso.resources
 D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_ModificacionCurso.resources
 D:\Facultad\3er Año\Programación de Aplicaciones Visuales I\TP PAVI\TP 2°Entrega\TP_PAVI\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_AvancePorCurso.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\bin\Debug\TP_PAVI.exe.config
+C:\Users\delav\OneDrive\Escritorio\PAV2021\bin\Debug\TP_PAVI.exe
+C:\Users\delav\OneDrive\Escritorio\PAV2021\bin\Debug\TP_PAVI.pdb
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.csproj.AssemblyReference.cache
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Presentación.Form_InicioSesion.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Presentación.Form_MenuPrincipal.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Categorias.FormCategorias.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_ABMC_Curso.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_AltaCurso.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_AvancePorCurso.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.Form_ModificacionCurso.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.FormPlantilla.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Presentación.Form_Plantilla_ABMC.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Properties.Resources.resources
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.csproj.GenerateResource.cache
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.csproj.CoreCompileInputs.cache
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.exe
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.pdb
+C:\Users\delav\OneDrive\Escritorio\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Categorias.FormCategoriasAM.resources

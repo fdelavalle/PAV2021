@@ -15,7 +15,7 @@ namespace TP_PAVI.Datos
 
         private DBHelper()
         {
-            string_conexion = @"Data Source=DESKTOP-EP9FF3K\SQLEXPRESS;Initial Catalog=TP_PAVI_Extendido;Integrated Security=True";
+            string_conexion = @"Data Source=.\SQLEXPRESS;Initial Catalog=TP_PAVI_Extendido;Integrated Security=True";
         }
         
         public static DBHelper getDBHelper()
@@ -87,6 +87,45 @@ namespace TP_PAVI.Datos
             
 
         }
+
+        public DataTable ConsultaSQLFacu(string strSql, Dictionary<string, object> prs = null)
+        {
+
+            SqlConnection dbConnection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            DataTable tabla = new DataTable();
+            try
+            {
+
+                dbConnection.ConnectionString = string_conexion;
+                dbConnection.Open();
+                cmd.Connection = dbConnection;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = strSql;
+
+                //Agregamos a la colección de parámetros del comando los filtros recibidos
+                if (prs != null)
+                {
+                    foreach (var item in prs)
+                    {
+                        cmd.Parameters.AddWithValue(item.Key, item.Value);
+                    }
+                }
+
+                tabla.Load(cmd.ExecuteReader());
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+            finally
+            {
+                if (dbConnection.State != ConnectionState.Closed)
+                    dbConnection.Close();
+            }
+        }
+
 
         public DataTable ConsultaSQLConParametros (string strSQL, Object[] prs)
         {
@@ -179,6 +218,26 @@ namespace TP_PAVI.Datos
             }
             return rtdo;
         }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //VER COMO SE IMPLEMENTA ConsultaSQL PARA CAMBIAR TODO A UN SOLO MÉTODO
         public DataTable ConsultaSQL2(string strSql, Dictionary<string, object> prs = null)

@@ -74,6 +74,18 @@
     <Compile Include="Presentación\Form Inicio y Menu\Form_MenuPrincipal.Designer.cs">
       <DependentUpon>Form_MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentación\Forms Categorias\FormCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Forms Categorias\FormCategorias.Designer.cs">
+      <DependentUpon>FormCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Forms Categorias\FormCategoriasAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Forms Categorias\FormCategoriasAM.Designer.cs">
+      <DependentUpon>FormCategoriasAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\Forms Cursos\Form_ABMC_Curso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Form Inicio y Menu\Form_MenuPrincipal.resx">
       <DependentUpon>Form_MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Forms Categorias\FormCategorias.resx">
+      <DependentUpon>FormCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Forms Categorias\FormCategoriasAM.resx">
+      <DependentUpon>FormCategoriasAM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Forms Cursos\Form_ABMC_Curso.resx">
       <DependentUpon>Form_ABMC_Curso.cs</DependentUpon>
@@ -217,7 +235,6 @@
     <None Include="Resources\salir.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presentación\Forms Categorias\" />
     <Folder Include="Presentación\Forms Objetivos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

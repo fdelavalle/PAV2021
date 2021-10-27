@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_PAVI.Negocio.Entidades;
+using TP_PAVI.Presentación.Forms_Categorias;
 using TP_PAVI.Presentación.Forms_Cursos;
 
 namespace TP_PAVI.Presentación
@@ -42,6 +43,13 @@ namespace TP_PAVI.Presentación
         {
             Form_AvancePorCurso frmAvance = new Form_AvancePorCurso();
             frmAvance.Show();
+            this.Close();
+        }
+
+        private void gestiónDeCategoríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCategorias frmCategorias = new FormCategorias();
+            frmCategorias.Show();
             this.Close();
         }
     }

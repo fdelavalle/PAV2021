@@ -19,5 +19,34 @@ namespace TP_PAVI.Negocio.Control
             return oCategoriasDAO.FindAll();
         }
 
+        public IList<Categorias> obtenerConFiltros(Dictionary<string, object> filtro)
+        {
+            return oCategoriasDAO.ObtenerCategoriasPorFiltro(filtro);
+        }
+
+        internal bool crearCategorias(Categorias oCategoria)
+        {
+            return oCategoriasDAO.crearCategorias(oCategoria);
+        }
+
+        public object obtenerCategoria(string categoria)
+        {
+            return oCategoriasDAO.obtenerCategoria(categoria);
+        }
+
+        internal bool actualizarCategorias(Categorias oCategoria)
+        {
+            return oCategoriasDAO.actualizarCategorias(oCategoria);
+        }
+
+        internal bool eliminarCategorias(Categorias oCategoria)
+        {
+            return oCategoriasDAO.eliminarCategorias(oCategoria);
+        }
+
+
+
+
+
     }
 }

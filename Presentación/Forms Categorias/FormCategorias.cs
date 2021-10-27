@@ -164,5 +164,12 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // esto es para que se actualice la grilla
             btnConsultar_Click(sender, e);
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Form_MenuPrincipal frmMenu = new Form_MenuPrincipal();
+            frmMenu.Show();
+            this.Close();
+        }
     }
 }

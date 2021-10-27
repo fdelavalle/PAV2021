@@ -68,7 +68,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(237, 11);
+            this.maxBtn.Location = new System.Drawing.Point(182, 11);
             // 
             // label1
             // 
@@ -115,6 +115,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalir.TabIndex = 8;
             this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // checkboxCategorias
             // 

@@ -61,19 +61,16 @@ namespace TP_PAVI.Datos.Dao
         }
         internal bool crearCategorias(Categorias categoria)
         {
-            Random rnd = new Random();
-
-            string id_cat = rnd.Next(4, 1000).ToString();
-            string strSql = "INSERT INTO Categorias ( nombre, descripcion, borrado, id_categoria) " +
-                            "VALUES (@nombre ,@descripcion, 0,12)";
+            string str_sql = "     INSERT INTO Categorias (id_categoria, nombre, descripcion, borrado)" +
+                             "     VALUES (@id_categoria, @nombre, @descripcion, 0)";
 
             var parametros = new Dictionary<string, object>();
-            ;
+            parametros.Add("id_categoria", ObtenerUltimoId());
             parametros.Add("nombre", categoria.nombre);
             parametros.Add("descripcion", categoria.descripcion);
 
             // Si una fila es afectada por la actualización retorna TRUE. Caso contrario FALSE
-            return (DBHelper.getDBHelper().EjecutarSQL2(strSql, parametros) == 1);
+            return (DBHelper.getDBHelper().EjecutarSQL2(str_sql, parametros) == 1);
 
         }
 
@@ -90,7 +87,16 @@ namespace TP_PAVI.Datos.Dao
 
         }
 
-        
+        private int ObtenerUltimoId()
+        {
+            int id = 0;
+            string str_sql = "SELECT MAX(id_categoria) FROM CATEGORIAS";
+            DataTable tabla = DBHelper.getDBHelper().ConsultaSQL(str_sql);
+            id = int.Parse(tabla.Rows[0][0].ToString());
+            return id + 1;
+        }
+
+
 
         internal bool eliminarCategorias(Categorias categoriaSelected)
         {

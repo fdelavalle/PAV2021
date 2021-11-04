@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TP_PAVI
 {
-    public partial class FormPlantilla : Form
+    public partial class Form_Plantilla : Form
     {
-        public FormPlantilla()
+        public Form_Plantilla()
         {
             InitializeComponent();
 

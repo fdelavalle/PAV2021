@@ -74,11 +74,11 @@
     <Compile Include="Presentación\Form Inicio y Menu\Form_MenuPrincipal.Designer.cs">
       <DependentUpon>Form_MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Forms Categorias\FormCategorias.cs">
+    <Compile Include="Presentación\Forms Categorias\FormCategoriasABMC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Forms Categorias\FormCategorias.Designer.cs">
-      <DependentUpon>FormCategorias.cs</DependentUpon>
+    <Compile Include="Presentación\Forms Categorias\FormCategoriasABMC.Designer.cs">
+      <DependentUpon>FormCategoriasABMC.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Forms Categorias\FormCategoriasAM.cs">
       <SubType>Form</SubType>
@@ -130,8 +130,8 @@
     <EmbeddedResource Include="Presentación\Form Inicio y Menu\Form_MenuPrincipal.resx">
       <DependentUpon>Form_MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Forms Categorias\FormCategorias.resx">
-      <DependentUpon>FormCategorias.cs</DependentUpon>
+    <EmbeddedResource Include="Presentación\Forms Categorias\FormCategoriasABMC.resx">
+      <DependentUpon>FormCategoriasABMC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Forms Categorias\FormCategoriasAM.resx">
       <DependentUpon>FormCategoriasAM.cs</DependentUpon>

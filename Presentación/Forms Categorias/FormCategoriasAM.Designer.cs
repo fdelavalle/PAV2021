@@ -35,16 +35,18 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.greaterBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).BeginInit();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greaterBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // restoreBtn
             // 
-            this.restoreBtn.Location = new System.Drawing.Point(522, 11);
+            this.restoreBtn.Location = new System.Drawing.Point(511, 11);
             // 
             // closeBtn
             // 
@@ -56,11 +58,22 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // 
             // panelBarraTitulo
             // 
+            this.panelBarraTitulo.Controls.Add(this.greaterBtn);
             this.panelBarraTitulo.Size = new System.Drawing.Size(590, 47);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.maxBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.closeBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.minBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.restoreBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.Titulo, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.greaterBtn, 0);
+            // 
+            // Titulo
+            // 
+            this.Titulo.Location = new System.Drawing.Point(12, 8);
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(182, 11);
+            this.maxBtn.Location = new System.Drawing.Point(-1178, 11);
             // 
             // lblNombre
             // 
@@ -112,6 +125,18 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // greaterBtn
+            // 
+            this.greaterBtn.Image = global::TP_PAVI.Properties.Resources.max;
+            this.greaterBtn.Location = new System.Drawing.Point(522, 10);
+            this.greaterBtn.Name = "greaterBtn";
+            this.greaterBtn.Size = new System.Drawing.Size(25, 24);
+            this.greaterBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.greaterBtn.TabIndex = 5;
+            this.greaterBtn.TabStop = false;
+            this.greaterBtn.Click += new System.EventHandler(this.greaterBtn_Click);
             // 
             // FormCategoriasAM
             // 
@@ -126,6 +151,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             this.Controls.Add(this.lblNombre);
             this.Name = "FormCategoriasAM";
             this.Text = "FormCategoriasAM";
+            this.Load += new System.EventHandler(this.FormCategoriasAM_Load);
             this.Controls.SetChildIndex(this.lblNombre, 0);
             this.Controls.SetChildIndex(this.textBoxNombre, 0);
             this.Controls.SetChildIndex(this.lblDescripcion, 0);
@@ -139,6 +165,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             this.panelBarraTitulo.ResumeLayout(false);
             this.panelBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greaterBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +179,6 @@ namespace TP_PAVI.Presentación.Forms_Categorias
         private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.PictureBox greaterBtn;
     }
 }

@@ -13,7 +13,7 @@ using TP_PAVI.Presentación.Forms_Cursos;
 
 namespace TP_PAVI.Presentación
 {
-    public partial class Form_MenuPrincipal : FormPlantilla
+    public partial class Form_MenuPrincipal : Form_Plantilla
     {
         public Usuario usuarioLogueado;
         public Form_MenuPrincipal()
@@ -48,7 +48,7 @@ namespace TP_PAVI.Presentación
 
         private void gestiónDeCategoríasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormCategorias frmCategorias = new FormCategorias();
+            FormCategoriasABMC frmCategorias = new FormCategoriasABMC();
             frmCategorias.Show();
             this.Close();
         }

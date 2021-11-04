@@ -12,32 +12,31 @@ using TP_PAVI.Negocio.Control;
 
 namespace TP_PAVI.Presentación.Forms_Categorias
 {
-    public partial class FormCategorias : FormPlantilla
+    public partial class FormCategoriasABMC : Form_Plantilla_ABMC
     {
 
         //obtener categorias y eso
         private GestorCategorias oGestorCategoria;
 
 
-        public FormCategorias()
+        public FormCategoriasABMC()
         {
             InitializeComponent();
             InitializeDataGridView();
             oGestorCategoria = new GestorCategorias();
-            btnModificarCategoria.Enabled = false;
-            btnEliminarCategoria.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
        
 
         private void InitializeDataGridView()
         {
-            //defino la cantiddad de columnas
+            //cantidad de columnas
             dgvCategorias.ColumnCount = 2;
             dgvCategorias.ColumnHeadersVisible = true;
 
-
-            //para qe no se autogeneren las columnas
+            //para que las columnas no se generen automaticamente
             dgvCategorias.AutoGenerateColumns = false;
 
             // definicion de los nombres de las columnas y el datapropertyname
@@ -54,24 +53,13 @@ namespace TP_PAVI.Presentación.Forms_Categorias
 
             dgvCategorias.AutoResizeColumnHeadersHeight();
 
-            // ajustar el contenio de las celdas que no sean encabezado
+            
             // cambia el tamaño de todas las alturas de fila
-
-
             dgvCategorias.AutoResizeColumns(DataGridViewAutoSizeColumnsMo‌​de.AllCells);
+
         }
 
-        private void ckdCategorias_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkboxCategorias.Checked)
-            {
-                txtBoxCategoria.Enabled = false;
-            }
-            else
-            {
-                txtBoxCategoria.Enabled = true;
-            }
-        }
+        
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
@@ -95,8 +83,8 @@ namespace TP_PAVI.Presentación.Forms_Categorias
                     }
                     else
                     {
-                        btnEliminarCategoria.Enabled = true;
-                        btnModificarCategoria.Enabled = true;
+                        btnEliminar.Enabled = true;
+                        btnModificar.Enabled = true;
                     }
                 }
 
@@ -105,23 +93,14 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             else
             {
                 dgvCategorias.DataSource = oGestorCategoria.ObtenerTodos();
-                btnEliminarCategoria.Enabled = true;
-                btnModificarCategoria.Enabled = true;
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
             }
         }
 
-       
-        
 
-       
-       
-
-       
-        
-
-        private void btnCrearCategoria_Click(object sender, EventArgs e)
+        private void btnCrear_Click(object sender, EventArgs e)
         {
-             
             //falta crear form de abmc
             FormCategoriasAM fmCategoriaAlta = new FormCategoriasAM();
             fmCategoriaAlta.ShowDialog();
@@ -130,7 +109,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             btnConsultar_Click(sender, e);
         }
 
-        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             FormCategoriasAM formulario = new FormCategoriasAM();
 
@@ -147,7 +126,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             btnConsultar_Click(sender, e);
         }
 
-        private void btnModificarCategoria_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             //falta crear form abmc
             FormCategoriasAM formulario = new FormCategoriasAM();
@@ -165,11 +144,23 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             btnConsultar_Click(sender, e);
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Form_MenuPrincipal frmMenu = new Form_MenuPrincipal();
             frmMenu.Show();
             this.Close();
+        }
+
+        private void checkboxCategorias_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkboxCategorias.Checked)
+            {
+                txtBoxCategoria.Enabled = false;
+            }
+            else
+            {
+                txtBoxCategoria.Enabled = true;
+            }
         }
     }
 }

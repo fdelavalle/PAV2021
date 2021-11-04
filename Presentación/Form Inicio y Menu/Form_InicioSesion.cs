@@ -12,7 +12,7 @@ using TP_PAVI.Negocio.Entidades;
 
 namespace TP_PAVI.Presentación
 {
-    public partial class Form_InicioSesion : FormPlantilla
+    public partial class Form_InicioSesion : Form_Plantilla
     {
         private readonly GestorUsuario oGestorUsuario;
         public Usuario usuarioLogueado;

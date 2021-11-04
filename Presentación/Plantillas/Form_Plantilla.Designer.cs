@@ -1,7 +1,7 @@
 ﻿
 namespace TP_PAVI
 {
-    partial class FormPlantilla
+    partial class Form_Plantilla
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@ namespace TP_PAVI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlantilla));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Plantilla));
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.Titulo = new System.Windows.Forms.Label();
             this.restoreBtn = new System.Windows.Forms.PictureBox();

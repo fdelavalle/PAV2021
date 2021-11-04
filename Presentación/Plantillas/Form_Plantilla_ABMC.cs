@@ -11,7 +11,7 @@ using TP_PAVI.Presentación;
 
 namespace TP_PAVI.Presentación
 {
-    public partial class Form_Plantilla_ABMC : FormPlantilla
+    public partial class Form_Plantilla_ABMC : Form_Plantilla
     {
         public Form_Plantilla_ABMC()
         {

@@ -12,7 +12,7 @@ using TP_PAVI.Negocio.Control;
 
 namespace TP_PAVI.Presentación.Forms_Cursos
 {
-    public partial class Form_AltaCurso : FormPlantilla
+    public partial class Form_AltaCurso : Form_Plantilla
     {
         public Cursos oCurso;
         public GestorCursos oGestorCursos;

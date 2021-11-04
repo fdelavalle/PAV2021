@@ -1,28 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_PAVI.Clases;
 using TP_PAVI.Negocio.Control;
+using TP_PAVI.Presentación;
 
 namespace TP_PAVI.Presentación.Forms_Categorias
 {
-    public partial class FormCategoriasAM : FormPlantilla
+    public partial class FormCategoriasAM : Form_Plantilla
     {
-        public FormMode formMode = FormMode.nuevo;
-        public readonly GestorCategorias oGestorCategorias;
-        public Categorias categoriaSeleccionada;
+        private FormMode formMode = FormMode.nuevo;
+        public GestorCategorias oGestorCategorias;
+        public Categorias oCategoriaSeleccionada;
+
+
         public FormCategoriasAM()
         {
             InitializeComponent();
             oGestorCategorias = new GestorCategorias();
-            categoriaSeleccionada = new Categorias();
+            oCategoriaSeleccionada = new Categorias();
         }
+
+
 
         public enum FormMode
         {
@@ -31,53 +30,21 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             eliminar
         }
 
-        private void frmCategoriaABMC_Load(object sender, EventArgs e)
-        {
-            // LlenarCombo(txtCatNueva, oCategoriaService.obtenerTodas(), "nombre", "id_categoria");
-            switch (formMode)
-            {
-                case FormMode.nuevo:
-                    {
-                        this.Text = "Nueva Categoria";
-                        break;
-                    }
 
-                case FormMode.actualizar:
-                    {
-                        this.Text = "Actualizar Categoria";
-                        // Recuperar usuario seleccionado en la grilla 
-                        MostrarDatos();
-                        textBoxNombre.Enabled = true;
-                        textBoxDescripcion.Enabled = true;
-                        break;
-                    }
-
-                case FormMode.eliminar:
-                    {
-                        MostrarDatos();
-                        this.Text = "Habilitar/Deshabilitar Usuario";
-                        textBoxNombre.Enabled = false;
-                        textBoxDescripcion.Enabled = false;
-                        break;
-                    }
-            }
-
-           
-        }
         private void MostrarDatos()
         {
-            if (categoriaSeleccionada != null)
+            if (oCategoriaSeleccionada != null)
             {
-                textBoxNombre.Text = categoriaSeleccionada.nombre;
-                textBoxDescripcion.Text = categoriaSeleccionada.descripcion;
+                textBoxNombre.Text = oCategoriaSeleccionada.nombre;
+                textBoxDescripcion.Text = oCategoriaSeleccionada.descripcion;
             }
         }
 
-        
+
         public void InitializeForm(FormMode op, Categorias categoriaSeleccionada1)
         {
             formMode = op;
-            categoriaSeleccionada = categoriaSeleccionada1;
+            oCategoriaSeleccionada = categoriaSeleccionada1;
         }
 
         private bool ValidarCampos()
@@ -113,9 +80,40 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             return oGestorCategorias.obtenerCategoria(textBoxNombre.Text) != null;
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void FormCategoriasAM_Load(object sender, EventArgs e)
         {
-            this.Close();
+            switch (formMode)
+            {
+                case FormMode.nuevo:
+                    {
+                        Titulo.Text = "Nueva Categoria";
+                        break;
+                    }
+
+                case FormMode.actualizar:
+                    {
+                        Titulo.Text = "Actualizar Categoria";
+                        // Recuperar usuario seleccionado en la grilla 
+                        MostrarDatos();
+                        textBoxNombre.Enabled = true;
+                        textBoxDescripcion.Enabled = true;
+                        break;
+                    }
+
+                case FormMode.eliminar:
+                    {
+                        MostrarDatos();
+                        Titulo.Text = "Deshabilitar Categoria";
+                        textBoxNombre.Enabled = false;
+                        textBoxDescripcion.Enabled = false;
+                        break;
+                    }
+
+            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -149,9 +147,9 @@ namespace TP_PAVI.Presentación.Forms_Categorias
                     {
                         if (ValidarCampos())
                         {
-                            categoriaSeleccionada.nombre = textBoxNombre.Text;
-                            categoriaSeleccionada.descripcion = textBoxDescripcion.Text;
-                            if (oGestorCategorias.actualizarCategorias(categoriaSeleccionada))
+                            oCategoriaSeleccionada.nombre = textBoxNombre.Text;
+                            oCategoriaSeleccionada.descripcion = textBoxDescripcion.Text;
+                            if (oGestorCategorias.actualizarCategorias(oCategoriaSeleccionada))
                             {
                                 MessageBox.Show("Categoria actualizada", " Informacion");
                                 this.Dispose();
@@ -165,7 +163,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
                     {
                         if (MessageBox.Show(" Seguro que desea eliminar/deshabilitar la categoria seleccionada?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
-                            if (oGestorCategorias.eliminarCategorias(categoriaSeleccionada))
+                            if (oGestorCategorias.eliminarCategorias(oCategoriaSeleccionada))
                             {
                                 MessageBox.Show("Categoria eliminada/deshabilitada", "Informacion");
                                 this.Close();
@@ -179,6 +177,18 @@ namespace TP_PAVI.Presentación.Forms_Categorias
                     break;
 
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void greaterBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            maxBtn.Visible = false;
+            restoreBtn.Visible = true;
         }
     }
 }

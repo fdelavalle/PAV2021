@@ -1,7 +1,7 @@
 ﻿
 namespace TP_PAVI.Presentación.Forms_Categorias
 {
-    partial class FormCategorias
+    partial class FormCategoriasABMC
     {
         /// <summary>
         /// Required designer variable.
@@ -33,26 +33,39 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             this.txtBoxCategoria = new System.Windows.Forms.TextBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.checkboxCategorias = new System.Windows.Forms.CheckBox();
-            this.btnCrearCategoria = new System.Windows.Forms.PictureBox();
-            this.btnModificarCategoria = new System.Windows.Forms.PictureBox();
-            this.btnEliminarCategoria = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCrear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).BeginInit();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCrearCategoria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnModificarCategoria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCategoria)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(610, 5);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // restoreBtn
             // 
-            this.restoreBtn.Location = new System.Drawing.Point(637, 11);
+            this.restoreBtn.Location = new System.Drawing.Point(632, 12);
             // 
             // closeBtn
             // 
@@ -60,15 +73,20 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // 
             // minBtn
             // 
-            this.minBtn.Location = new System.Drawing.Point(606, 11);
+            this.minBtn.Location = new System.Drawing.Point(601, 12);
             // 
             // panelBarraTitulo
             // 
             this.panelBarraTitulo.Size = new System.Drawing.Size(705, 47);
             // 
+            // Titulo
+            // 
+            this.Titulo.Size = new System.Drawing.Size(135, 29);
+            this.Titulo.Text = "Categorias";
+            // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(182, 11);
+            this.maxBtn.Location = new System.Drawing.Point(637, 12);
             // 
             // label1
             // 
@@ -106,17 +124,6 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             this.dgvCategorias.Size = new System.Drawing.Size(578, 231);
             this.dgvCategorias.TabIndex = 4;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Image = global::TP_PAVI.Properties.Resources.salir;
-            this.btnSalir.Location = new System.Drawing.Point(607, 383);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(55, 55);
-            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSalir.TabIndex = 8;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // checkboxCategorias
             // 
             this.checkboxCategorias.AutoSize = true;
@@ -126,66 +133,30 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             this.checkboxCategorias.TabIndex = 9;
             this.checkboxCategorias.Text = "Todas";
             this.checkboxCategorias.UseVisualStyleBackColor = true;
+            this.checkboxCategorias.CheckedChanged += new System.EventHandler(this.checkboxCategorias_CheckedChanged);
             // 
-            // btnCrearCategoria
-            // 
-            this.btnCrearCategoria.Image = global::TP_PAVI.Properties.Resources.icons8_create_90;
-            this.btnCrearCategoria.Location = new System.Drawing.Point(51, 383);
-            this.btnCrearCategoria.Name = "btnCrearCategoria";
-            this.btnCrearCategoria.Size = new System.Drawing.Size(55, 55);
-            this.btnCrearCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnCrearCategoria.TabIndex = 10;
-            this.btnCrearCategoria.TabStop = false;
-            this.btnCrearCategoria.Click += new System.EventHandler(this.btnCrearCategoria_Click);
-            // 
-            // btnModificarCategoria
-            // 
-            this.btnModificarCategoria.Image = global::TP_PAVI.Properties.Resources.icons8_edit_96;
-            this.btnModificarCategoria.Location = new System.Drawing.Point(122, 383);
-            this.btnModificarCategoria.Name = "btnModificarCategoria";
-            this.btnModificarCategoria.Size = new System.Drawing.Size(55, 55);
-            this.btnModificarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnModificarCategoria.TabIndex = 11;
-            this.btnModificarCategoria.TabStop = false;
-            this.btnModificarCategoria.Click += new System.EventHandler(this.btnModificarCategoria_Click);
-            // 
-            // btnEliminarCategoria
-            // 
-            this.btnEliminarCategoria.Image = global::TP_PAVI.Properties.Resources.icons8_delete_64;
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(187, 383);
-            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
-            this.btnEliminarCategoria.Size = new System.Drawing.Size(55, 55);
-            this.btnEliminarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEliminarCategoria.TabIndex = 12;
-            this.btnEliminarCategoria.TabStop = false;
-            this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
-            // 
-            // FormCategorias
+            // FormCategoriasABMC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 450);
-            this.Controls.Add(this.btnEliminarCategoria);
-            this.Controls.Add(this.btnModificarCategoria);
-            this.Controls.Add(this.btnCrearCategoria);
             this.Controls.Add(this.checkboxCategorias);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvCategorias);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.txtBoxCategoria);
             this.Controls.Add(this.label1);
-            this.Name = "FormCategorias";
+            this.Name = "FormCategoriasABMC";
             this.Text = "FormCategorias";
             this.Controls.SetChildIndex(this.panelBarraTitulo, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtBoxCategoria, 0);
             this.Controls.SetChildIndex(this.btnConsultar, 0);
             this.Controls.SetChildIndex(this.dgvCategorias, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.checkboxCategorias, 0);
-            this.Controls.SetChildIndex(this.btnCrearCategoria, 0);
-            this.Controls.SetChildIndex(this.btnModificarCategoria, 0);
-            this.Controls.SetChildIndex(this.btnEliminarCategoria, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.btnCrear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).EndInit();
@@ -193,10 +164,6 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             this.panelBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCrearCategoria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnModificarCategoria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarCategoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,10 +175,6 @@ namespace TP_PAVI.Presentación.Forms_Categorias
         private System.Windows.Forms.TextBox txtBoxCategoria;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.DataGridView dgvCategorias;
-        private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.CheckBox checkboxCategorias;
-        private System.Windows.Forms.PictureBox btnCrearCategoria;
-        private System.Windows.Forms.PictureBox btnModificarCategoria;
-        private System.Windows.Forms.PictureBox btnEliminarCategoria;
     }
 }

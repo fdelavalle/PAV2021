@@ -73,7 +73,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(-1178, 11);
+            this.maxBtn.Location = new System.Drawing.Point(-1348, 11);
             // 
             // lblNombre
             // 
@@ -111,7 +111,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // 
             this.btnAceptar.Location = new System.Drawing.Point(227, 216);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(80, 28);
             this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // 
             this.btnCancelar.Location = new System.Drawing.Point(375, 216);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(80, 28);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;

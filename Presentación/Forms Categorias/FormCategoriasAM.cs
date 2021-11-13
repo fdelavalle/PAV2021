@@ -21,68 +21,12 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             oCategoriaSeleccionada = new Categorias();
         }
 
-
-
         public enum FormMode
         {
             nuevo,
             actualizar,
             eliminar
         }
-
-
-        private void MostrarDatos()
-        {
-            if (oCategoriaSeleccionada != null)
-            {
-                textBoxNombre.Text = oCategoriaSeleccionada.nombre;
-                textBoxDescripcion.Text = oCategoriaSeleccionada.descripcion;
-            }
-        }
-
-
-        public void InitializeForm(FormMode op, Categorias categoriaSeleccionada1)
-        {
-            formMode = op;
-            oCategoriaSeleccionada = categoriaSeleccionada1;
-        }
-
-        private bool ValidarCampos()
-        {
-            if (textBoxNombre.Text == string.Empty)
-            {
-                textBoxNombre.BackColor = Color.Red;
-                textBoxNombre.Focus();
-                return false;
-            }
-            else
-            {
-                textBoxNombre.BackColor = Color.White;
-
-            }
-            if (lblDescripcion.Text == string.Empty)
-            {
-                lblDescripcion.BackColor = Color.Red;
-                lblDescripcion.Focus();
-                return false;
-            }
-            else
-            {
-                lblDescripcion.BackColor = Color.White;
-                return true;
-            }
-
-
-        }
-
-        private bool existeCategoria()
-        {
-            return oGestorCategorias.obtenerCategoria(textBoxNombre.Text) != null;
-        }
-
-        
-
-        
 
         private void FormCategoriasAM_Load(object sender, EventArgs e)
         {
@@ -116,13 +60,29 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             }
         }
 
+        public void InitializeForm(FormMode op, Categorias categoriaSeleccionada1)
+        {
+            formMode = op;
+            oCategoriaSeleccionada = categoriaSeleccionada1;
+        }
+
+
+        private void MostrarDatos()
+        {
+            if (oCategoriaSeleccionada != null)
+            {
+                textBoxNombre.Text = oCategoriaSeleccionada.nombre;
+                textBoxDescripcion.Text = oCategoriaSeleccionada.descripcion;
+            }
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             switch (formMode)
             {
                 case FormMode.nuevo:
                     {
-                        if (existeCategoria() == false)
+                        if (!existeCategoria())
                         {
                             if (ValidarCampos())
                             {
@@ -133,14 +93,14 @@ namespace TP_PAVI.Presentación.Forms_Categorias
 
                                 if (oGestorCategorias.crearCategorias(oCategoria))
                                 {
-                                    MessageBox.Show(" Categoria agregada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Categoria agregada satisfactoriamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                             }
 
                         }
                         else
-                            MessageBox.Show("La categoria insertada ya existe, ingrese otro nuevo");
+                            MessageBox.Show("La categoria que desea agregar ya existe. Ingrese un nombre diferente");
                         break;
                     }
                 case FormMode.actualizar:
@@ -151,21 +111,21 @@ namespace TP_PAVI.Presentación.Forms_Categorias
                             oCategoriaSeleccionada.descripcion = textBoxDescripcion.Text;
                             if (oGestorCategorias.actualizarCategorias(oCategoriaSeleccionada))
                             {
-                                MessageBox.Show("Categoria actualizada", " Informacion");
+                                MessageBox.Show("Categoria actualizada!", " Informacion");
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar la categoria", "Informacion");
+                                MessageBox.Show("Error al actualizar categoria", "Informacion");
                         }
                         break;
                     }
                 case FormMode.eliminar:
                     {
-                        if (MessageBox.Show(" Seguro que desea eliminar/deshabilitar la categoria seleccionada?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("Seguro que desea deshabilitar categoria seleccionada?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
                             if (oGestorCategorias.eliminarCategorias(oCategoriaSeleccionada))
                             {
-                                MessageBox.Show("Categoria eliminada/deshabilitada", "Informacion");
+                                MessageBox.Show("Categoria deshabilitada!", "Informacion");
                                 this.Close();
                             }
                             else
@@ -177,6 +137,29 @@ namespace TP_PAVI.Presentación.Forms_Categorias
                     break;
 
             }
+        }
+
+
+        private bool ValidarCampos()
+        {
+            //campos obligatorios
+            if (textBoxNombre.Text == string.Empty)
+            {
+                textBoxNombre.BackColor = Color.Red;
+                textBoxNombre.Focus();
+                return false;
+            }
+            else
+                textBoxNombre.BackColor = Color.White;
+
+            return true;
+
+
+        }
+
+        private bool existeCategoria()
+        {
+            return oGestorCategorias.obtenerCategoria(textBoxNombre.Text) != null;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

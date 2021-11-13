@@ -50,6 +50,11 @@ namespace TP_PAVI.Negocio.Control
             return oCursosDAO.ObtenerUltimoId();
         }
 
+        internal bool ExisteCurso(string oCursoSelected)
+        {
+            return oCursosDAO.Exist(oCursoSelected);
+        }
+
 
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TP_PAVI.Negocio.Entidades;
 using TP_PAVI.Presentación.Forms_Categorias;
 using TP_PAVI.Presentación.Forms_Cursos;
+using TP_PAVI.Presentación.Forms_Reporte;
 
 namespace TP_PAVI.Presentación
 {
@@ -51,6 +52,20 @@ namespace TP_PAVI.Presentación
             FormCategoriasABMC frmCategorias = new FormCategoriasABMC();
             frmCategorias.Show();
             this.Close();
+        }
+
+        private void reportesCursosUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReportes frmReports = new FormReportes();
+            frmReports.Show();
+            this.Close();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            maxBtn.Visible = false;
+            restoreBtn.Visible = true;
         }
     }
 }

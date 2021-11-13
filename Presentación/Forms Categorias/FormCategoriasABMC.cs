@@ -128,7 +128,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //falta crear form abmc
+           
             FormCategoriasAM formulario = new FormCategoriasAM();
 
             // para obtener la categoria que selecciono en la grilla y modificarla:

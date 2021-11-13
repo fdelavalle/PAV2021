@@ -29,6 +29,7 @@ namespace TP_PAVI.Presentación
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,17 +38,22 @@ namespace TP_PAVI.Presentación
             this.gestiónDeCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.objetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaciónDeObjetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesCursosUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnMax = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).BeginInit();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             this.SuspendLayout();
             // 
             // restoreBtn
             // 
-            this.restoreBtn.Location = new System.Drawing.Point(732, 11);
+            this.restoreBtn.Location = new System.Drawing.Point(732, 12);
             // 
             // closeBtn
             // 
@@ -59,11 +65,18 @@ namespace TP_PAVI.Presentación
             // 
             // panelBarraTitulo
             // 
+            this.panelBarraTitulo.Controls.Add(this.btnMax);
             this.panelBarraTitulo.Size = new System.Drawing.Size(800, 47);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.btnMax, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.maxBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.closeBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.minBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.restoreBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.Titulo, 0);
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(812, 11);
+            this.maxBtn.Location = new System.Drawing.Point(932, 11);
             // 
             // menuStrip1
             // 
@@ -72,10 +85,11 @@ namespace TP_PAVI.Presentación
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cursosToolStripMenuItem,
             this.categoríasToolStripMenuItem,
-            this.objetivosToolStripMenuItem});
+            this.objetivosToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 50);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(404, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(336, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -131,6 +145,33 @@ namespace TP_PAVI.Presentación
             this.actualizaciónDeObjetivosToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
             this.actualizaciónDeObjetivosToolStripMenuItem.Text = "Actualización de Objetivos";
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportesCursosUsuariosToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // reportesCursosUsuariosToolStripMenuItem
+            // 
+            this.reportesCursosUsuariosToolStripMenuItem.Name = "reportesCursosUsuariosToolStripMenuItem";
+            this.reportesCursosUsuariosToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
+            this.reportesCursosUsuariosToolStripMenuItem.Text = "Reportes Cursos/Usuarios";
+            this.reportesCursosUsuariosToolStripMenuItem.Click += new System.EventHandler(this.reportesCursosUsuariosToolStripMenuItem_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMax.Image = global::TP_PAVI.Properties.Resources.max;
+            this.btnMax.Location = new System.Drawing.Point(732, 11);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(25, 25);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMax.TabIndex = 5;
+            this.btnMax.TabStop = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
             // Form_MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -150,6 +191,7 @@ namespace TP_PAVI.Presentación
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +207,9 @@ namespace TP_PAVI.Presentación
         private System.Windows.Forms.ToolStripMenuItem objetivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizaciónAvancesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizaciónDeObjetivosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesCursosUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox btnMax;
     }
 }

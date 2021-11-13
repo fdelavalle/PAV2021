@@ -117,7 +117,7 @@ namespace TP_PAVI.Datos.Dao
             string str_sql = "SELECT MAX(id_curso) FROM CURSOS";
             DataTable tabla = DBHelper.getDBHelper().ConsultaSQL(str_sql);
             id = int.Parse(tabla.Rows[0][0].ToString());
-            return id;
+            return id + 1;
         }
 
 
@@ -134,7 +134,7 @@ namespace TP_PAVI.Datos.Dao
                                        "c.fecha_vigencia as cFecha, " +
                                        "ca.id_categoria as caId, ca.nombre as caNombre, " +
                                        "ca.Descripcion as caDescripcion, ca.borrado as caBorrado " +
-                                       "FROM Cursos c JOIN Categorias ca ON ca.id_categoria = c.id_categoria ");
+                                       "FROM Cursos c INNER JOIN  Categorias ca ON ca.id_categoria = c.id_categoria ");
             }
             else
             {
@@ -143,7 +143,7 @@ namespace TP_PAVI.Datos.Dao
                                        "c.fecha_vigencia as cFecha, " +
                                        "ca.id_categoria as caId, ca.nombre as caNombre, " +
                                        "ca.Descripcion as caDescripcion, ca.borrado as caBorrado " +
-                                       "FROM Cursos c JOIN Categorias ca ON ca.id_categoria = c.id_categoria " +
+                                       "FROM Cursos c INNER JOIN Categorias ca ON ca.id_categoria = c.id_categoria " +
                                        "WHERE c.borrado = 0");
             }
 
@@ -154,9 +154,9 @@ namespace TP_PAVI.Datos.Dao
                 strSql += " AND (c.id_categoria=@id_categoria)";
             if (parametros.ContainsKey("fecha_vigencia"))
                 strSql += " AND (c.fecha_vigencia >= @fecha_vigencia) ";
-            var resultadoConsulta = (DataRowCollection)DBHelper.getDBHelper().ConsultaSQL2(strSql, parametros).Rows;
+            var resultadoConsulta = DBHelper.getDBHelper().ConsultaSQLFacu(strSql, parametros);
 
-            foreach (DataRow row in resultadoConsulta)
+            foreach (DataRow row in resultadoConsulta.Rows)
             {
                 listadoBugs.Add(ObjectMapping(row));
             }
@@ -182,6 +182,23 @@ namespace TP_PAVI.Datos.Dao
             };
             oCursos.borrado = Convert.ToBoolean(row["cBorrado"].ToString());
             return oCursos;
+        }
+
+
+        public bool Exist(String cursoNombre)
+        {
+
+            String consulta = string.Concat("SELECT * FROM Cursos C WHERE C.nombre = @cursoNombre");
+
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("cursoNombre", cursoNombre);
+
+            var resultadoConsulta = DBHelper.getDBHelper().ConsultaSQLFacu(consulta, parametros);
+
+            if (resultadoConsulta.Rows.Count != 0)
+                return true;
+
+            return false;
         }
 
 

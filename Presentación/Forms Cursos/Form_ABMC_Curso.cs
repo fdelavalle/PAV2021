@@ -53,7 +53,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             dataGridViewCursos.Columns[1].DataPropertyName = "descripcion";
 
             dataGridViewCursos.Columns[2].Name = "Categoria";
-            dataGridViewCursos.Columns[2].DataPropertyName = "categoria.nombre";
+            dataGridViewCursos.Columns[2].DataPropertyName = "categoria";
 
             dataGridViewCursos.Columns[3].Name = "Fecha vigencia";
             dataGridViewCursos.Columns[3].DataPropertyName = "fecha_vigencia";
@@ -117,33 +117,38 @@ namespace TP_PAVI.Presentación.Forms_Cursos
         private void btnExit_Click(object sender, EventArgs e)
         {
             Form_MenuPrincipal frmMenu = new Form_MenuPrincipal();
+            
             frmMenu.Show();
             this.Close();
+            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Form_ModificacionCurso frmModificacionCurso = new Form_ModificacionCurso();
-            frmModificacionCurso.oCurso = (Cursos)dataGridViewCursos.CurrentRow.DataBoundItem;
+            FormCursosAM frmModificacionCurso = new FormCursosAM();
+            Cursos curso = (Cursos)dataGridViewCursos.CurrentRow.DataBoundItem;
+            frmModificacionCurso.InitializeForm(FormCursosAM.FormMode.modificar, curso);
             frmModificacionCurso.Show();
-            this.Close();
+            
+           
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult rpta;
-            rpta = MessageBox.Show("¿Seguro que desea eliminar el curso seleccionado?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (rpta == DialogResult.Yes)
-            {
-                oGestorCurso.EliminarCurso((Cursos)dataGridViewCursos.CurrentRow.DataBoundItem);
-            }
+            FormCursosAM frmModificacionCurso = new FormCursosAM();
+            Cursos curso = (Cursos)dataGridViewCursos.CurrentRow.DataBoundItem;
+            frmModificacionCurso.InitializeForm(FormCursosAM.FormMode.eliminar, curso);
+            frmModificacionCurso.Show();
+            
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            Form_AltaCurso frmAltaCurso = new Form_AltaCurso();
+            FormCursosAM frmAltaCurso = new FormCursosAM();
             frmAltaCurso.Show();
-            this.Close();
+            
         }
+
+       
     }
 }

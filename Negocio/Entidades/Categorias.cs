@@ -13,5 +13,10 @@ namespace TP_PAVI.Clases
         public string descripcion { get; set; }
         public bool borrado { get; set; }
 
+        public override string ToString()
+        {
+            return nombre;
+        }
+
     }
 }

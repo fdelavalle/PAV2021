@@ -79,15 +79,15 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             // restoreBtn
             // 
-            this.restoreBtn.Location = new System.Drawing.Point(603, 11);
+            this.restoreBtn.Location = new System.Drawing.Point(610, 11);
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(638, 11);
+            this.closeBtn.Location = new System.Drawing.Point(640, 11);
             // 
             // minBtn
             // 
-            this.minBtn.Location = new System.Drawing.Point(572, 12);
+            this.minBtn.Location = new System.Drawing.Point(580, 11);
             // 
             // panelBarraTitulo
             // 
@@ -95,7 +95,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(353, 11);
+            this.maxBtn.Location = new System.Drawing.Point(609, 11);
             // 
             // dataGridViewCursos
             // 

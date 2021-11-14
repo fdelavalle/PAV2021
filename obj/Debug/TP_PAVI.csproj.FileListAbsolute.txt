@@ -119,5 +119,6 @@ C:\Users\delav\OneDrive\Escritorio\PAV_FINAL\PAV2021\bin\Debug\zh-HANS\Microsoft
 C:\Users\delav\OneDrive\Escritorio\PAV_FINAL\PAV2021\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\delav\OneDrive\Escritorio\PAV_FINAL\PAV2021\obj\Debug\RdlCompile.cache
 C:\Users\delav\OneDrive\Escritorio\PAV_FINAL\PAV2021\obj\Debug\RdlCompile.compiled
-C:\Users\delav\OneDrive\Escritorio\PAV_FINAL\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Reporte.FormReportes.resources
 C:\Users\delav\OneDrive\Escritorio\PAV_FINAL\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Cursos.FormCursosAM.resources
+C:\Users\delav\OneDrive\Escritorio\PAV_FINAL\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Reporte.FormReporteCantidad.resources
+C:\Users\delav\OneDrive\Escritorio\PAV_FINAL\PAV2021\obj\Debug\TP_PAVI.Presentación.Forms_Reporte.FormReporteAvance.resources

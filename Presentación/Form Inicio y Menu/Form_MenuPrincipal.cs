@@ -56,16 +56,26 @@ namespace TP_PAVI.Presentación
 
         private void reportesCursosUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormReportes frmReports = new FormReportes();
+            FormReporteCantidad frmReports = new FormReporteCantidad();
             frmReports.Show();
             this.Close();
         }
 
-        private void btnMax_Click(object sender, EventArgs e)
+      
+
+        private void reporteAvancePromedioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReporteAvance frmReports = new FormReporteAvance();
+            frmReports.Show();
+            this.Close();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             maxBtn.Visible = false;
             restoreBtn.Visible = true;
+
         }
     }
 }

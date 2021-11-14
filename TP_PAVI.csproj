@@ -122,11 +122,17 @@
     <Compile Include="Presentación\Forms Cursos\Form_AvancePorCurso.Designer.cs">
       <DependentUpon>Form_AvancePorCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Forms Reporte\FormReportes.cs">
+    <Compile Include="Presentación\Forms Reporte\FormReporteAvance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Forms Reporte\FormReportes.Designer.cs">
-      <DependentUpon>FormReportes.cs</DependentUpon>
+    <Compile Include="Presentación\Forms Reporte\FormReporteAvance.Designer.cs">
+      <DependentUpon>FormReporteAvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Forms Reporte\FormReporteCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Forms Reporte\FormReporteCantidad.Designer.cs">
+      <DependentUpon>FormReporteCantidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Plantillas\Form_Plantilla.cs">
       <SubType>Form</SubType>
@@ -172,8 +178,11 @@
     <EmbeddedResource Include="Presentación\Forms Cursos\Form_AvancePorCurso.resx">
       <DependentUpon>Form_AvancePorCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Forms Reporte\FormReportes.resx">
-      <DependentUpon>FormReportes.cs</DependentUpon>
+    <EmbeddedResource Include="Presentación\Forms Reporte\FormReporteAvance.resx">
+      <DependentUpon>FormReporteAvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Forms Reporte\FormReporteCantidad.resx">
+      <DependentUpon>FormReporteCantidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Plantillas\Form_Plantilla.resx">
       <DependentUpon>Form_Plantilla.cs</DependentUpon>
@@ -181,6 +190,7 @@
     <EmbeddedResource Include="Presentación\Plantillas\Form_Plantilla_ABMC.resx">
       <DependentUpon>Form_Plantilla_ABMC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Reportes\ReportAvances.rdlc" />
     <EmbeddedResource Include="Presentación\Reportes\ReportCursos.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

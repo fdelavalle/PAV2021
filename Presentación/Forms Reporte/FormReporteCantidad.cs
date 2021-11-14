@@ -12,9 +12,9 @@ using TP_PAVI.Datos;
 
 namespace TP_PAVI.Presentación.Forms_Reporte
 {
-    public partial class FormReportes : Form_Plantilla
+    public partial class FormReporteCantidad : Form_Plantilla
     {
-        public FormReportes()
+        public FormReporteCantidad()
         {
             InitializeComponent();
         }

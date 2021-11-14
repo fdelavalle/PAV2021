@@ -1,7 +1,7 @@
 ﻿
 namespace TP_PAVI.Presentación.Forms_Reporte
 {
-    partial class FormReportes
+    partial class FormReporteCantidad
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace TP_PAVI.Presentación.Forms_Reporte
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReportes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteCantidad));
             this.rpvCursos = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtFechaDesde1 = new System.Windows.Forms.MaskedTextBox();

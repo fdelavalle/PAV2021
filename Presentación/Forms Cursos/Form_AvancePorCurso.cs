@@ -84,14 +84,14 @@ namespace TP_PAVI.Presentación.Forms_Cursos
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dataGridViewAlumnos.Columns[0].Name = "Nombre";
-            dataGridViewAlumnos.Columns[0].DataPropertyName = "usuario.nombre";
+            dataGridViewAlumnos.Columns[0].DataPropertyName = "Nombre";
             // Definimos el ancho de la columna.
 
             dataGridViewAlumnos.Columns[1].Name = "Porcentaje de avance";
             dataGridViewAlumnos.Columns[1].DataPropertyName = "porc_avance";
 
             dataGridViewAlumnos.Columns[2].Name = "Email";
-            dataGridViewAlumnos.Columns[2].DataPropertyName = "usuario.Email";
+            dataGridViewAlumnos.Columns[2].DataPropertyName = "Email";
 
 
             // Cambia el tamaño de la altura de los encabezados de columna.

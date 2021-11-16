@@ -34,6 +34,7 @@ namespace TP_PAVI.Presentación
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaciónAvancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizaciónObjetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.objetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +82,7 @@ namespace TP_PAVI.Presentación
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(1092, 11);
+            this.maxBtn.Location = new System.Drawing.Point(1172, 11);
             // 
             // menuStrip1
             // 
@@ -94,7 +95,7 @@ namespace TP_PAVI.Presentación
             this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 50);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(336, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(486, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,7 +103,8 @@ namespace TP_PAVI.Presentación
             // 
             this.cursosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestiónDeCursosToolStripMenuItem,
-            this.actualizaciónAvancesToolStripMenuItem});
+            this.actualizaciónAvancesToolStripMenuItem,
+            this.actualizaciónObjetivosToolStripMenuItem});
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
             this.cursosToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.cursosToolStripMenuItem.Text = "Cursos";
@@ -110,16 +112,23 @@ namespace TP_PAVI.Presentación
             // gestiónDeCursosToolStripMenuItem
             // 
             this.gestiónDeCursosToolStripMenuItem.Name = "gestiónDeCursosToolStripMenuItem";
-            this.gestiónDeCursosToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.gestiónDeCursosToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.gestiónDeCursosToolStripMenuItem.Text = "Gestión de Cursos";
             this.gestiónDeCursosToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeCursosToolStripMenuItem_Click);
             // 
             // actualizaciónAvancesToolStripMenuItem
             // 
             this.actualizaciónAvancesToolStripMenuItem.Name = "actualizaciónAvancesToolStripMenuItem";
-            this.actualizaciónAvancesToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.actualizaciónAvancesToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.actualizaciónAvancesToolStripMenuItem.Text = "Actualización avances";
             this.actualizaciónAvancesToolStripMenuItem.Click += new System.EventHandler(this.actualizaciónAvancesToolStripMenuItem_Click);
+            // 
+            // actualizaciónObjetivosToolStripMenuItem
+            // 
+            this.actualizaciónObjetivosToolStripMenuItem.Name = "actualizaciónObjetivosToolStripMenuItem";
+            this.actualizaciónObjetivosToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
+            this.actualizaciónObjetivosToolStripMenuItem.Text = "Actualización objetivos";
+            this.actualizaciónObjetivosToolStripMenuItem.Click += new System.EventHandler(this.actualizaciónObjetivosToolStripMenuItem_Click);
             // 
             // categoríasToolStripMenuItem
             // 
@@ -237,5 +246,6 @@ namespace TP_PAVI.Presentación
         private System.Windows.Forms.PictureBox btnMax;
         private System.Windows.Forms.ToolStripMenuItem reporteAvancePromedioToolStripMenuItem;
         private System.Windows.Forms.PictureBox btnMaximizar;
+        private System.Windows.Forms.ToolStripMenuItem actualizaciónObjetivosToolStripMenuItem;
     }
 }

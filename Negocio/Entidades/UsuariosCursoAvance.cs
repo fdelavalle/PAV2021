@@ -15,5 +15,8 @@ namespace TP_PAVI.Clases
         public DateTime fin { get; set; }
         public int porc_avance { get; set; }
 
+        public string Email { get { return usuario.Email; } }
+        public string Nombre { get { return usuario.NombreUsuario; } }
+
     }
 }

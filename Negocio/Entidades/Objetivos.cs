@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_PAVI.Clases
 {
-    class Objetivos
+    public class Objetivos
     {
         public int id_objetivo { get; set; }
         public string nombre_corto { get; set; }

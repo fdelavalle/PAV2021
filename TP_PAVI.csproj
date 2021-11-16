@@ -66,11 +66,15 @@
   <ItemGroup>
     <Compile Include="Datos\Dao\CategoriasDAO.cs" />
     <Compile Include="Datos\Dao\CursosDAO.cs" />
+    <Compile Include="Datos\Dao\ObjetivosCursosDAO.cs" />
+    <Compile Include="Datos\Dao\ObjetivosDAO.cs" />
     <Compile Include="Datos\Dao\UsuarioDAO.cs" />
     <Compile Include="Datos\Dao\UsuariosCursoAvanceDAO.cs" />
     <Compile Include="Datos\Helper\DBHelper.cs" />
     <Compile Include="Negocio\Control\GestorCategorias.cs" />
     <Compile Include="Negocio\Control\GestorCursos.cs" />
+    <Compile Include="Negocio\Control\GestorObjetivos.cs" />
+    <Compile Include="Negocio\Control\GestorObjetivosCursos.cs" />
     <Compile Include="Negocio\Control\GestorUsuario.cs" />
     <Compile Include="Negocio\Control\GestorUsuariosCursoAvance.cs" />
     <Compile Include="Negocio\Entidades\Categorias.cs" />
@@ -121,6 +125,12 @@
     </Compile>
     <Compile Include="Presentación\Forms Cursos\Form_AvancePorCurso.Designer.cs">
       <DependentUpon>Form_AvancePorCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Forms Cursos\Form_ObjetivosPorCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Forms Cursos\Form_ObjetivosPorCurso.Designer.cs">
+      <DependentUpon>Form_ObjetivosPorCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Forms Reporte\FormReporteAvance.cs">
       <SubType>Form</SubType>
@@ -177,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Forms Cursos\Form_AvancePorCurso.resx">
       <DependentUpon>Form_AvancePorCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Forms Cursos\Form_ObjetivosPorCurso.resx">
+      <DependentUpon>Form_ObjetivosPorCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Forms Reporte\FormReporteAvance.resx">
       <DependentUpon>FormReporteAvance.cs</DependentUpon>
@@ -288,6 +301,9 @@
     <Folder Include="Presentación\Forms Objetivos\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\plis.bmp" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\plus.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

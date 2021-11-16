@@ -77,5 +77,12 @@ namespace TP_PAVI.Presentación
             restoreBtn.Visible = true;
 
         }
+
+        private void actualizaciónObjetivosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ObjetivosPorCurso frm = new Form_ObjetivosPorCurso();
+            frm.Show();
+            this.Close();
+        }
     }
 }

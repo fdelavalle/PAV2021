@@ -43,7 +43,7 @@ namespace TP_PAVI.Datos.Dao
         {
             List<Categorias> listadoCategoria = new List<Categorias>();
 
-            //FALTA MODIFICAR ESTE MÉTODO
+            
             var strSql = String.Concat("select c.id_categoria,c.nombre ,c.descripcion, c.borrado from categorias c where c.borrado=0");
 
             if (parametros.ContainsKey("nombre"))

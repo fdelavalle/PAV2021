@@ -55,23 +55,23 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             // restoreBtn
             // 
-            this.restoreBtn.Location = new System.Drawing.Point(632, 11);
+            this.restoreBtn.Location = new System.Drawing.Point(1288, 11);
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(663, 11);
+            this.closeBtn.Location = new System.Drawing.Point(1319, 11);
             // 
             // minBtn
             // 
-            this.minBtn.Location = new System.Drawing.Point(601, 11);
+            this.minBtn.Location = new System.Drawing.Point(1257, 11);
             // 
             // panelBarraTitulo
             // 
-            this.panelBarraTitulo.Size = new System.Drawing.Size(700, 47);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(1356, 47);
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(632, 11);
+            this.maxBtn.Location = new System.Drawing.Point(1431, 11);
             // 
             // comboBoxCursos
             // 
@@ -101,7 +101,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.dataGridViewObjetivosCurso.ReadOnly = true;
             this.dataGridViewObjetivosCurso.RowHeadersWidth = 51;
             this.dataGridViewObjetivosCurso.RowTemplate.Height = 24;
-            this.dataGridViewObjetivosCurso.Size = new System.Drawing.Size(296, 199);
+            this.dataGridViewObjetivosCurso.Size = new System.Drawing.Size(597, 372);
             this.dataGridViewObjetivosCurso.TabIndex = 3;
             // 
             // dataGridViewObjetivos
@@ -114,7 +114,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.dataGridViewObjetivos.ReadOnly = true;
             this.dataGridViewObjetivos.RowHeadersWidth = 51;
             this.dataGridViewObjetivos.RowTemplate.Height = 24;
-            this.dataGridViewObjetivos.Size = new System.Drawing.Size(309, 199);
+            this.dataGridViewObjetivos.Size = new System.Drawing.Size(620, 372);
             this.dataGridViewObjetivos.TabIndex = 4;
             // 
             // groupBoxCursos
@@ -123,7 +123,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.groupBoxCursos.Controls.Add(this.dataGridViewObjetivosCurso);
             this.groupBoxCursos.Location = new System.Drawing.Point(44, 130);
             this.groupBoxCursos.Name = "groupBoxCursos";
-            this.groupBoxCursos.Size = new System.Drawing.Size(308, 289);
+            this.groupBoxCursos.Size = new System.Drawing.Size(609, 455);
             this.groupBoxCursos.TabIndex = 5;
             this.groupBoxCursos.TabStop = false;
             this.groupBoxCursos.Text = "Objetivos del curso";
@@ -131,7 +131,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // btnQuitar
             // 
             this.btnQuitar.Image = global::TP_PAVI.Properties.Resources.minus;
-            this.btnQuitar.Location = new System.Drawing.Point(7, 227);
+            this.btnQuitar.Location = new System.Drawing.Point(6, 399);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(100, 50);
             this.btnQuitar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,9 +143,9 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             this.groupBoxObjetivos.Controls.Add(this.btnAgregar);
             this.groupBoxObjetivos.Controls.Add(this.dataGridViewObjetivos);
-            this.groupBoxObjetivos.Location = new System.Drawing.Point(358, 130);
+            this.groupBoxObjetivos.Location = new System.Drawing.Point(671, 130);
             this.groupBoxObjetivos.Name = "groupBoxObjetivos";
-            this.groupBoxObjetivos.Size = new System.Drawing.Size(331, 289);
+            this.groupBoxObjetivos.Size = new System.Drawing.Size(642, 455);
             this.groupBoxObjetivos.TabIndex = 6;
             this.groupBoxObjetivos.TabStop = false;
             this.groupBoxObjetivos.Text = "Todos los objetivos";
@@ -153,7 +153,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // btnAgregar
             // 
             this.btnAgregar.Image = global::TP_PAVI.Properties.Resources.plus;
-            this.btnAgregar.Location = new System.Drawing.Point(16, 227);
+            this.btnAgregar.Location = new System.Drawing.Point(16, 399);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 50);
             this.btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +164,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // pictureBox3
             // 
             this.pictureBox3.Image = global::TP_PAVI.Properties.Resources.salir;
-            this.pictureBox3.Location = new System.Drawing.Point(588, 425);
+            this.pictureBox3.Location = new System.Drawing.Point(1222, 594);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -187,7 +187,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 489);
+            this.ClientSize = new System.Drawing.Size(1356, 656);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBoxObjetivos);

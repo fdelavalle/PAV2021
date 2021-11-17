@@ -132,6 +132,18 @@
     <Compile Include="Presentación\Forms Cursos\Form_ObjetivosPorCurso.Designer.cs">
       <DependentUpon>Form_ObjetivosPorCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentación\Forms Objetivos\FormObjetivosABMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Forms Objetivos\FormObjetivosABMC.Designer.cs">
+      <DependentUpon>FormObjetivosABMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Forms Objetivos\FormObjetivosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Forms Objetivos\FormObjetivosAM.Designer.cs">
+      <DependentUpon>FormObjetivosAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\Forms Reporte\FormReporteAvance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +202,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Forms Cursos\Form_ObjetivosPorCurso.resx">
       <DependentUpon>Form_ObjetivosPorCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Forms Objetivos\FormObjetivosABMC.resx">
+      <DependentUpon>FormObjetivosABMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Forms Objetivos\FormObjetivosAM.resx">
+      <DependentUpon>FormObjetivosAM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Forms Reporte\FormReporteAvance.resx">
       <DependentUpon>FormReporteAvance.cs</DependentUpon>
@@ -297,13 +315,13 @@
   <ItemGroup>
     <None Include="Resources\salir.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentación\Forms Objetivos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\plis.bmp" />
     <None Include="Resources\minus.png" />
     <None Include="Resources\plus.png" />
+    <None Include="Resources\e-learning-solutions-concept-icon-vector-38145442.jpg" />
+    <None Include="Resources\a3ea4c90a81a5713113fd42e20bb312f-diseno-de-logo-de-e-learning.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

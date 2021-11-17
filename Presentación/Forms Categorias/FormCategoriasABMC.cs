@@ -74,7 +74,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
 
                 if (filtros.Count > 0)
                 {
-                    //codificar obtenerconfiltros
+                    
                     dgvCategorias.DataSource = oGestorCategoria.obtenerConFiltros(filtros);
                     if (dgvCategorias.Rows.Count == 0)
                     {

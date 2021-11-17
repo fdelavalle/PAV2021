@@ -173,5 +173,10 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             maxBtn.Visible = false;
             restoreBtn.Visible = true;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

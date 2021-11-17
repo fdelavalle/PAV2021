@@ -81,12 +81,12 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // 
             // Titulo
             // 
-            this.Titulo.Size = new System.Drawing.Size(135, 29);
-            this.Titulo.Text = "Categorias";
+            this.Titulo.Size = new System.Drawing.Size(264, 29);
+            this.Titulo.Text = "Gestión de Categorias";
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(637, 12);
+            this.maxBtn.Location = new System.Drawing.Point(537, 11);
             // 
             // label1
             // 

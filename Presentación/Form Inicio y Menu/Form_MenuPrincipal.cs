@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TP_PAVI.Negocio.Entidades;
 using TP_PAVI.Presentación.Forms_Categorias;
 using TP_PAVI.Presentación.Forms_Cursos;
+using TP_PAVI.Presentación.Forms_Objetivos;
 using TP_PAVI.Presentación.Forms_Reporte;
 
 namespace TP_PAVI.Presentación
@@ -81,6 +82,13 @@ namespace TP_PAVI.Presentación
         private void actualizaciónObjetivosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_ObjetivosPorCurso frm = new Form_ObjetivosPorCurso();
+            frm.Show();
+            this.Close();
+        }
+
+        private void actualizaciónDeObjetivosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormObjetivosABMC frm = new FormObjetivosABMC();
             frm.Show();
             this.Close();
         }

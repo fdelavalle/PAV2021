@@ -53,18 +53,18 @@ namespace TP_PAVI.Presentación.Forms_Objetivos
                             if (!oObjetivoSeleccionado.borrado)
                             {
 
-                                textBoxNombreCorto.Enabled = false;
-                                textBoxNombreLargo.Enabled = false;
+                                textBoxNombreCorto.Enabled = true;
+                                textBoxNombreLargo.Enabled = true;
 
 
-                                btnConfirmar.Enabled = false;
+                                btnConfirmar.Enabled = true;
                             }
                         }
                         break;
                     }
                 case FormMode.eliminar:
                     {
-                        this.Text = "Eliminar Objetivo";
+                        Titulo.Text = "Eliminar Objetivo";
                         mostrarDatos();
                         textBoxNombreCorto.Enabled = false;
                         textBoxNombreLargo.Enabled = false;
@@ -116,8 +116,11 @@ namespace TP_PAVI.Presentación.Forms_Objetivos
                     {
                         if (validarCampos())
                         {
+                            textBoxNombreCorto.Enabled = true;
+                            textBoxNombreLargo.Enabled = true;
                             oObjetivoSeleccionado.nombre_corto = textBoxNombreCorto.Text;
                             oObjetivoSeleccionado.nombre_largo = textBoxNombreLargo.Text;
+                            
 
                             if (oGestorObjetivos.ActualizarObjetivos(oObjetivoSeleccionado))
                             {

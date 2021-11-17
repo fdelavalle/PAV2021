@@ -95,7 +95,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(484, 11);
+            this.maxBtn.Location = new System.Drawing.Point(609, 12);
             // 
             // dataGridViewCursos
             // 

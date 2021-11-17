@@ -150,5 +150,12 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             }
           
         }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            maxBtn.Visible = false;
+            restoreBtn.Visible = true;
+        }
     }
 }

@@ -86,7 +86,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(537, 11);
+            this.maxBtn.Location = new System.Drawing.Point(632, 12);
             // 
             // label1
             // 

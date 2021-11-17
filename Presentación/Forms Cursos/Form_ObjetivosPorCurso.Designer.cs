@@ -39,6 +39,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.btnAgregar = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.buttonAceptar = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).BeginInit();
@@ -51,6 +52,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.groupBoxObjetivos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             this.SuspendLayout();
             // 
             // restoreBtn
@@ -67,11 +69,18 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             // panelBarraTitulo
             // 
+            this.panelBarraTitulo.Controls.Add(this.btnMax);
             this.panelBarraTitulo.Size = new System.Drawing.Size(1356, 47);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.maxBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.closeBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.minBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.restoreBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.Titulo, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.btnMax, 0);
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(1431, 11);
+            this.maxBtn.Location = new System.Drawing.Point(2027, 11);
             // 
             // comboBoxCursos
             // 
@@ -183,6 +192,18 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.buttonAceptar.UseVisualStyleBackColor = true;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
+            // btnMax
+            // 
+            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMax.Image = global::TP_PAVI.Properties.Resources.max;
+            this.btnMax.Location = new System.Drawing.Point(1288, 11);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(25, 23);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMax.TabIndex = 5;
+            this.btnMax.TabStop = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
             // Form_ObjetivosPorCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,6 +237,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.groupBoxObjetivos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +255,6 @@ namespace TP_PAVI.Presentación.Forms_Cursos
         private System.Windows.Forms.PictureBox btnAgregar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button buttonAceptar;
+        private System.Windows.Forms.PictureBox btnMax;
     }
 }

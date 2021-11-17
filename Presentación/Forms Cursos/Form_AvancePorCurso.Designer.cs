@@ -39,6 +39,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.maskedTextBoxAvance = new System.Windows.Forms.MaskedTextBox();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).BeginInit();
@@ -47,6 +48,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumnos)).BeginInit();
             this.groupBoxAlumnos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             this.SuspendLayout();
             // 
             // restoreBtn
@@ -63,11 +65,18 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             // panelBarraTitulo
             // 
+            this.panelBarraTitulo.Controls.Add(this.btnMax);
             this.panelBarraTitulo.Size = new System.Drawing.Size(711, 47);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.maxBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.closeBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.minBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.restoreBtn, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.Titulo, 0);
+            this.panelBarraTitulo.Controls.SetChildIndex(this.btnMax, 0);
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(763, 11);
+            this.maxBtn.Location = new System.Drawing.Point(714, 11);
             // 
             // pictureBoxRegresar
             // 
@@ -178,6 +187,18 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.buttonAceptar.UseVisualStyleBackColor = true;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
+            // btnMax
+            // 
+            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMax.Image = global::TP_PAVI.Properties.Resources.max;
+            this.btnMax.Location = new System.Drawing.Point(643, 11);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(25, 23);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMax.TabIndex = 5;
+            this.btnMax.TabStop = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
             // Form_AvancePorCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,7 +216,6 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.Name = "Form_AvancePorCurso";
             this.Text = "Form_AvancePorCurso";
             this.Load += new System.EventHandler(this.Form_AvancePorCurso_Load);
-            this.Controls.SetChildIndex(this.panelBarraTitulo, 0);
             this.Controls.SetChildIndex(this.pictureBoxRegresar, 0);
             this.Controls.SetChildIndex(this.comboBoxCursos, 0);
             this.Controls.SetChildIndex(this.labelCursos, 0);
@@ -205,6 +225,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.Controls.SetChildIndex(this.maskedTextBoxAvance, 0);
             this.Controls.SetChildIndex(this.buttonConfirmar, 0);
             this.Controls.SetChildIndex(this.buttonAceptar, 0);
+            this.Controls.SetChildIndex(this.panelBarraTitulo, 0);
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).EndInit();
@@ -214,6 +235,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRegresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumnos)).EndInit();
             this.groupBoxAlumnos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +253,6 @@ namespace TP_PAVI.Presentación.Forms_Cursos
         private System.Windows.Forms.MaskedTextBox maskedTextBoxAvance;
         private System.Windows.Forms.Button buttonConfirmar;
         private System.Windows.Forms.Button buttonAceptar;
+        private System.Windows.Forms.PictureBox btnMax;
     }
 }

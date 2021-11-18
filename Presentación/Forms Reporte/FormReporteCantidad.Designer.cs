@@ -49,20 +49,20 @@ namespace TP_PAVI.Presentación.Forms_Reporte
             // 
             // restoreBtn
             // 
-            this.restoreBtn.Location = new System.Drawing.Point(873, 10);
+            this.restoreBtn.Location = new System.Drawing.Point(882, 10);
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(904, 11);
+            this.closeBtn.Location = new System.Drawing.Point(913, 11);
             // 
             // minBtn
             // 
-            this.minBtn.Location = new System.Drawing.Point(842, 11);
+            this.minBtn.Location = new System.Drawing.Point(851, 11);
             // 
             // panelBarraTitulo
             // 
             this.panelBarraTitulo.Controls.Add(this.btnMaximizar);
-            this.panelBarraTitulo.Size = new System.Drawing.Size(941, 46);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(950, 46);
             this.panelBarraTitulo.Controls.SetChildIndex(this.maxBtn, 0);
             this.panelBarraTitulo.Controls.SetChildIndex(this.closeBtn, 0);
             this.panelBarraTitulo.Controls.SetChildIndex(this.minBtn, 0);
@@ -78,7 +78,7 @@ namespace TP_PAVI.Presentación.Forms_Reporte
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(2683, 11);
+            this.maxBtn.Location = new System.Drawing.Point(2873, 11);
             // 
             // rpvCursos
             // 
@@ -86,14 +86,14 @@ namespace TP_PAVI.Presentación.Forms_Reporte
             this.rpvCursos.Location = new System.Drawing.Point(15, 97);
             this.rpvCursos.Name = "rpvCursos";
             this.rpvCursos.ServerReport.BearerToken = null;
-            this.rpvCursos.Size = new System.Drawing.Size(914, 479);
+            this.rpvCursos.Size = new System.Drawing.Size(923, 626);
             this.rpvCursos.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(874, 582);
+            this.pictureBox1.Location = new System.Drawing.Point(882, 739);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,11 +157,11 @@ namespace TP_PAVI.Presentación.Forms_Reporte
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
-            // FormReportes
+            // FormReporteCantidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 638);
+            this.ClientSize = new System.Drawing.Size(950, 795);
             this.Controls.Add(this.txtFechaHasta1);
             this.Controls.Add(this.btnGenerar1);
             this.Controls.Add(this.label4);
@@ -169,7 +169,7 @@ namespace TP_PAVI.Presentación.Forms_Reporte
             this.Controls.Add(this.txtFechaDesde1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rpvCursos);
-            this.Name = "FormReportes";
+            this.Name = "FormReporteCantidad";
             this.Text = "FormReportes";
             this.Load += new System.EventHandler(this.FormReportes_Load);
             this.Controls.SetChildIndex(this.rpvCursos, 0);

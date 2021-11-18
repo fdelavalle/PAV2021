@@ -70,11 +70,12 @@ namespace TP_PAVI.Presentación.Forms_Objetivos
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(-103, 11);
+            this.maxBtn.Location = new System.Drawing.Point(-262, 11);
             // 
             // textBoxNombreCorto
             // 
             this.textBoxNombreCorto.Location = new System.Drawing.Point(193, 90);
+            this.textBoxNombreCorto.MaxLength = 50;
             this.textBoxNombreCorto.Name = "textBoxNombreCorto";
             this.textBoxNombreCorto.Size = new System.Drawing.Size(277, 22);
             this.textBoxNombreCorto.TabIndex = 1;
@@ -82,6 +83,7 @@ namespace TP_PAVI.Presentación.Forms_Objetivos
             // textBoxNombreLargo
             // 
             this.textBoxNombreLargo.Location = new System.Drawing.Point(193, 158);
+            this.textBoxNombreLargo.MaxLength = 50;
             this.textBoxNombreLargo.Name = "textBoxNombreLargo";
             this.textBoxNombreLargo.Size = new System.Drawing.Size(277, 22);
             this.textBoxNombreLargo.TabIndex = 2;

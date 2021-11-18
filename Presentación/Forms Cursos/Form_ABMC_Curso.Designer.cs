@@ -95,7 +95,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(609, 12);
+            this.maxBtn.Location = new System.Drawing.Point(484, 12);
             // 
             // dataGridViewCursos
             // 
@@ -208,6 +208,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(12, 58);
+            this.textBoxNombre.MaxLength = 50;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(174, 26);
             this.textBoxNombre.TabIndex = 10;

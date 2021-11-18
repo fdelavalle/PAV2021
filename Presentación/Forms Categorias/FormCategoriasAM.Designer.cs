@@ -74,7 +74,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(-1688, 11);
+            this.maxBtn.Location = new System.Drawing.Point(-1858, 11);
             // 
             // lblNombre
             // 
@@ -88,6 +88,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(117, 92);
+            this.textBoxNombre.MaxLength = 50;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(351, 22);
             this.textBoxNombre.TabIndex = 1;
@@ -104,6 +105,7 @@ namespace TP_PAVI.Presentación.Forms_Categorias
             // textBoxDescripcion
             // 
             this.textBoxDescripcion.Location = new System.Drawing.Point(117, 147);
+            this.textBoxDescripcion.MaxLength = 50;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(351, 22);
             this.textBoxDescripcion.TabIndex = 3;

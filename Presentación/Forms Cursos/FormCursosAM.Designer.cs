@@ -74,7 +74,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(-263, 11);
+            this.maxBtn.Location = new System.Drawing.Point(-454, 11);
             // 
             // Nombre
             // 
@@ -128,6 +128,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // textBoxDescripcion
             // 
             this.textBoxDescripcion.Location = new System.Drawing.Point(207, 174);
+            this.textBoxDescripcion.MaxLength = 50;
             this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(216, 93);
@@ -136,6 +137,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(206, 84);
+            this.textBoxNombre.MaxLength = 50;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(217, 22);
             this.textBoxNombre.TabIndex = 0;
@@ -183,7 +185,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.btnMax.TabStop = false;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
-            // FormAM
+            // FormCursosAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,7 +200,7 @@ namespace TP_PAVI.Presentación.Forms_Cursos
             this.Controls.Add(this.Categoría);
             this.Controls.Add(this.FechaVigencia);
             this.Controls.Add(this.Nombre);
-            this.Name = "FormAM";
+            this.Name = "FormCursosAM";
             this.Text = "Form_AltaCurso";
             this.Load += new System.EventHandler(this.FormAM_Load);
             this.Controls.SetChildIndex(this.panelBarraTitulo, 0);

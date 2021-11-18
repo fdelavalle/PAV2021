@@ -102,7 +102,7 @@ namespace TP_PAVI.Presentación.Forms_Objetivos
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(-244, 11);
+            this.maxBtn.Location = new System.Drawing.Point(-352, 11);
             // 
             // dgvObjetivos
             // 
@@ -143,6 +143,7 @@ namespace TP_PAVI.Presentación.Forms_Objetivos
             // 
             this.textBoxNombreCorto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombreCorto.Location = new System.Drawing.Point(12, 58);
+            this.textBoxNombreCorto.MaxLength = 50;
             this.textBoxNombreCorto.Name = "textBoxNombreCorto";
             this.textBoxNombreCorto.Size = new System.Drawing.Size(174, 26);
             this.textBoxNombreCorto.TabIndex = 10;

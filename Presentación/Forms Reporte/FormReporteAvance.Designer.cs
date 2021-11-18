@@ -43,20 +43,20 @@ namespace TP_PAVI.Presentación.Forms_Reporte
             // 
             // restoreBtn
             // 
-            this.restoreBtn.Location = new System.Drawing.Point(970, 11);
+            this.restoreBtn.Location = new System.Drawing.Point(983, 11);
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(1001, 11);
+            this.closeBtn.Location = new System.Drawing.Point(1014, 11);
             // 
             // minBtn
             // 
-            this.minBtn.Location = new System.Drawing.Point(939, 11);
+            this.minBtn.Location = new System.Drawing.Point(952, 11);
             // 
             // panelBarraTitulo
             // 
             this.panelBarraTitulo.Controls.Add(this.btnMax);
-            this.panelBarraTitulo.Size = new System.Drawing.Size(1038, 47);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(1051, 47);
             this.panelBarraTitulo.Controls.SetChildIndex(this.maxBtn, 0);
             this.panelBarraTitulo.Controls.SetChildIndex(this.closeBtn, 0);
             this.panelBarraTitulo.Controls.SetChildIndex(this.minBtn, 0);
@@ -71,7 +71,7 @@ namespace TP_PAVI.Presentación.Forms_Reporte
             // 
             // maxBtn
             // 
-            this.maxBtn.Location = new System.Drawing.Point(1248, 11);
+            this.maxBtn.Location = new System.Drawing.Point(1539, 11);
             // 
             // rpvAvances
             // 
@@ -79,14 +79,14 @@ namespace TP_PAVI.Presentación.Forms_Reporte
             this.rpvAvances.Location = new System.Drawing.Point(12, 53);
             this.rpvAvances.Name = "rpvAvances";
             this.rpvAvances.ServerReport.BearerToken = null;
-            this.rpvAvances.Size = new System.Drawing.Size(1014, 509);
+            this.rpvAvances.Size = new System.Drawing.Size(1027, 701);
             this.rpvAvances.TabIndex = 0;
             // 
             // btnExit
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = global::TP_PAVI.Properties.Resources.salir;
-            this.btnExit.Location = new System.Drawing.Point(970, 568);
+            this.btnExit.Location = new System.Drawing.Point(983, 760);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(56, 44);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@ namespace TP_PAVI.Presentación.Forms_Reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 624);
+            this.ClientSize = new System.Drawing.Size(1051, 816);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.rpvAvances);
             this.Name = "FormReporteAvance";
